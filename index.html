@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html style="overflow-y: scroll;"  lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="ourWork.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="sideBar.css">
+    <link rel="stylesheet" href="sliderFan.css">
+    <link rel="stylesheet" href="mobileScrollButton.css">
+    <link rel="stylesheet" href="construction.css">
+
+    
+    
+    
+  
+    
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+    <script>
+      tailwind.config = {
+        theme: {
+         
+          extend: {
+            backgroundImage: theme => ({
+        'construction-site': "url('images/kifisia_191.jpg')",
+      }),
+      backgroundPosition: {
+        'center': 'center',
+      },
+      width: {
+        'custom': 'calc(100% - 100px)',
+      },
+      backgroundSize: {
+        'cover': 'cover',
+      },
+            fontSize: {
+        '22': '22px',
+      },
+      fontFamily: {
+        'custom': ['IBM Plex Sans', 'sans-serif'],
+      },
+            lineHeight: {
+              "48px": "48px",
+            },
+            fontSize: {
+              "14px": "14px",
+            },
+            letterSpacing: {
+              "0.04em": "0.04em",
+            },
+            zIndex: {
+              3: "3",
+            },
+            fontFamily: {
+              custom: ["CFAstyStd", "Arial", "Verdana", "sans-serif"],
+            },
+            colors: {
+              clifford: "#da373d",
+              "custom-gray": "#4e4e51",
+              "custom-green": "#708c80",
+              "custom-border": "#afafb1",
+              "custom-text-color": "#212125",
+              "custom-black": "#4e4e51",
+              "custom-light-green": "#718E80"
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+    .text-enhance {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* enhanced text shadow for better visibility without the background */
+        line-height: 1.5; /* increased line height */
+        letter-spacing: 0.5px; /* slight letter spacing */
+    }
+
+    @keyframes bgZoom {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.05);
+      }
+    }
+    
+    /* Typewriter effect */
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    @keyframes blink {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: white;
+      }
+    }
+    .typewriter h1 {
+      overflow: hidden;
+      border-right: .15em solid white;
+      white-space: nowrap;
+      margin: 0 auto;
+      animation: typewriter 3s steps(40, end), blink 0.75s step-end infinite;
+    }
+    
+    /* Shimmer effect */
+    .shimmer {
+      animation: shimmer 2s infinite;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 25%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 75%);
+      background-size: 200% 100%;
+      color: rgba(255,255,255,0.3);
+    }
+    @keyframes shimmer {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+    
+    /* Input field focus effect */
+    input:focus {
+      border-color: white;
+      box-shadow: 0 0 5px white;
+    }
+    
+    /* Button hover effect */
+    button:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Logo fade-in effect */
+    .logo-fade-in {
+      animation: fadeIn 3s;
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    /* Background zoom animation */
+    .bg-animation {
+      animation: bgZoom 30000s infinite alternate;
+    }
+
+    @keyframes bgDramaticEntrance {
+    0% {
+      opacity: 0;
+      transform: scale(1.5) rotate(10deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  .bg-dramatic-entrance {
+    animation: bgDramaticEntrance 5s forwards, bgZoom 30000s infinite alternate 5s;
+  }
+
+</style>
+
+
+
+
+<title> Inter-tech • Welcome</title>
+<link class="logo" rel="icon" href="images/logo_inter.png" type="image/png" />
+  </head>
+  <body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none">
+  >
+  <!-- Scroll to Top Button -->
+      <button
+        id="scrollTopButton"
+        class="scrollTopButton cursor-pointer fixed bottom-3.5 right-2.5  w-10 h-10 text-center z-50 decoration-white bg-blue-500 text-white p-2 rounded-full"
+      >
+        <i class="fa fa-chevron-up cursor-pointer"></i>
+      </button>
+
+
+
+
+
+
+    
+      <style>
+        @media (max-width: 640px) {
+            .mobile-left {
+                left: 4px !important;
+            }
+        }
+    </style>
+    
+    <div
+      class="fixed top-0 left-16 z-50 inline-block mobile-left"
+      style="width: 180px; height: 100px;"
+    >
+      <a href="index.html">
+        <!-- <span  style="font-size: 1.5em; font-weight: bold; color: #000; margin-right: 20px;">ΣΤΡΑΤΑ Α.Τ.Ε</span> -->
+        <img class="lg:ml-5" src="images/DiTe_logo.png" alt="Logo" style="margin-top: -2px; width: 100%; height: auto;" />
+      </a>
+</div>
+
+
+    
+    
+
+        
+
+<main class="ml-16 relative px-8">
+  <div class="absolute inset-0 h-screen w-full bg-cover bg-center bg-dramatic-entrance" style="background-image: url('images/kifisia_12.jpg');"></div>
+
+
+          
+          <div class="absolute inset-0 h-screen w-full bg-black opacity-30"></div>
+          
+          <div class="relative h-screen flex flex-col items-center justify-center text-center">
+            <h2 class="typewriter text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 leading-relaxed text-shadow-md shimmer" data-aos="fade-down" data-aos-duration="3000">
+              ΟΙΚΟΔΟΜΗ ΠΟΛΥΤΕΛΩΝ ΔΙΑΜΕΡΙΣΜΑΤΩΝ <br> ΣΤΗΝ ΚΗΦΙΣΙΑ <br> Για περισσότερες πληροφορίες συμπληρώστε την παρακάτω φόρμα :
+            </h2>
+              <form data-aos="fade-left" data-aos-duration="3000" class="bg-opacity-30 backdrop-blur-md p-5 rounded-lg shadow-md flex flex-col items-start gap-3 max-w-sm w-full">
+                  <label for="name" style="margin-bottom: 5px; font-weight: bold; color: #fff;">Όνομα:</label>
+                    <input type="text" id="name" name="name" placeholder="Εισάγετε το όνομα σας" style="margin-bottom: 10px; padding: 10px; border-radius: 5px; border: 1px solid rgba(255, 255, 255, 0.8); width: 100%; font-size: 16px; background-color: rgba(0,0,0,0.3); color: #fff;"><br>
+                    
+                    <label for="surname" style="margin-bottom: 5px; font-weight: bold; color: #fff;">Επίθετο:</label>
+                    <input type="text" id="surname" name="surname" placeholder="Εισάγετε το επίθετο σας" style="margin-bottom: 10px; padding: 10px; border-radius: 5px; border: 1px solid rgba(255, 255, 255, 0.8); width: 100%; font-size: 16px; background-color: rgba(0,0,0,0.3); color: #fff;"><br>
+                    
+                    <label for="email" style="margin-bottom: 5px; font-weight: bold; color: #fff;">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Εισάγετε το email σας" style="margin-bottom: 10px; padding: 10px; border-radius: 5px; border: 1px solid rgba(255, 255, 255, 0.8); width: 100%; font-size: 16px; background-color: rgba(0,0,0,0.3); color: #fff;"><br>
+                  <button type="submit" class="py-2 px-4 rounded bg-blue-500 text-white text-lg hover:bg-blue-700 transition duration-300 ease-in-out focus:outline-none">Υποβολή</button>
+              </form>
+          </div>
+          
+        </main>
+   
+
+    <section id="ourWork" class="max-w-full ml-16 pl-5 md:pl-20  px-2 md:px-10 pb-0 py-12" data-aos="fade-up">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
+        <!-- Start of image 1 -->
+        <div>
+            <a href="images/kifisia_11.jpg" data-fancybox="gallery" data-caption=" Εξωτερική όψη ">
+                <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/kifisia_11.jpg);"></div>
+            </a>
+            <p class="text-center mt-2 text-blue-500"> Εξωτερική όψη </p>
+        </div>
+        <!-- End of image 1 -->
+
+        <!-- Start of image 2 -->
+        <div>
+            <a href="images/kifisia_12.jpg" data-fancybox="gallery" data-caption="Εξωτερική όψη ">
+                <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/kifisia_12.jpg);"></div>
+            </a>
+            <p class="text-center mt-2 text-blue-500">Εξωτερική όψη </p>
+        </div>
+   
+    </div>
+</section>
+<section id="buildingConstruction" class="max-w-full ml-16 pl-5 md:pl-20 pt-5 px-2 md:px-10 pb-0 py-12 mt-10">
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+      <!-- Start of image 1 -->
+      <div >
+        <a href="images/kifisia_141.jpg" data-fancybox="gallery" data-caption="Εξωτερική όψη">
+            <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/kifisia_141.jpg);"></div>
+        </a>
+        <p class="text-center mt-2 text-blue-500">Εξωτερική όψη</p>
+    </div>
+    
+      <!-- End of image 1 -->
+
+      <!-- Start of image 2 -->
+      <div>
+        <a href="images/kifisia_191.jpg" data-fancybox="gallery" data-caption="Εξωτερική όψη">
+            <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/kifisia_191.jpg);"></div>
+        </a>
+        <p class="text-center mt-2 text-blue-500">Εξωτερική όψη</p>
+    </div>
+      
+  </div>
+</section>
+
+
+
+
+  
+  
+
+
+<section id="buildingConstruction" class="max-w-full ml-16 pl-5 md:pl-20 pt-5 px-2 md:px-10 pb-0 py-12 mt-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
+      <!-- Start of image 1 -->
+      <div>
+          <a href="images/kifisia_911.jpg" data-fancybox="gallery" data-caption="Εξωτερική όψη">
+              <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/kifisia_911.jpg);"></div>
+          </a>
+          <p class="text-center mt-2 text-blue-500">Εξωτερική όψη</p>
+      </div>
+      <!-- End of image 1 --
+
+      <!-- Start of image 2 -->
+      <div>
+          <a href="images/kifisia_211_Photo.jpg" data-fancybox="gallery" data-caption="Εξωτερική όψη">
+              <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/kifisia_211_Photo.jpg);"></div>
+          </a>
+          <p class="text-center mt-2 text-blue-500">Εξωτερική όψη</p>
+      </div>
+   
+  </div>
+</section>
+
+<section id="buildingConstruction" class="max-w-full ml-16 pl-5 md:pl-20 pt-5 px-2 md:px-10 pb-0 py-12 mt-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+      <!-- Start of image 1 -->
+      <div>
+          <a href="images/APO-PROS.jpg" data-fancybox="gallery" data-caption="Ενδεικτική εσωτερική διακόσμηση">
+              <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/APO-PROS.jpg);"></div>
+          </a>
+          <p class="text-center mt-2 text-blue-500">Ενδεικτική εσωτερική διακόσμηση</p>
+      </div>
+      <!-- End of image 1 -->
+
+      <!-- Start of image 2 -->
+      <div>
+          <a href="images/ΚΑΘΙΣΤΙΚΟ.jpg" data-fancybox="gallery" data-caption="Ενδεικτική εσωτερική διακόσμηση">
+              <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/ΚΑΘΙΣΤΙΚΟ.jpg);"></div>
+          </a>
+          <p class="text-center mt-2 text-blue-500">Ενδεικτική εσωτερική διακόσμηση</p>
+      </div>
+      <!-- End of image 2 -->
+</section>
+
+<section id="buildingConstruction" class="max-w-full ml-16 pl-5 md:pl-20 pt-5 px-2 md:px-10 pb-0 py-12 mt-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+      
+    <div>
+      <a href="images/ΚΑΘΙΣΤΙΚΟ-ΤΡΑΠΕΖΑΡΙΑ.jpg" data-fancybox="gallery" data-caption="Ενδεικτική εσωτερική διακόσμηση">
+          <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/ΚΑΘΙΣΤΙΚΟ-ΤΡΑΠΕΖΑΡΙΑ.jpg);"></div>
+      </a>
+      <p class="text-center mt-2 text-blue-500">Ενδεικτική εσωτερική διακόσμηση</p>
+
+  </div>
+
+  <div>
+    <a href="images/ΤΡΑΠΕΖ-ΚΟΥΖ-ΚΑΘΙΣΤΙΚΟ.jpg" data-fancybox="gallery" data-caption="Ενδεικτική εσωτερική διακόσμηση">
+        <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/ΤΡΑΠΕΖ-ΚΟΥΖ-ΚΑΘΙΣΤΙΚΟ.jpg);"></div>
+    </a>
+    <p class="text-center mt-2 text-blue-500">Ενδεικτική εσωτερική διακόσμηση</p>
+
+</div>
+      
+
+  </div>
+</section>
+
+<section id="buildingConstruction" class="max-w-full ml-16 pl-5 md:pl-20 pt-5 px-2 md:px-10 pb-0 py-12 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        
+      <div>
+        <a href="images/ΚΟΥΖΙΝΑ-ΠΑΓΚΟΣ.jpg" data-fancybox="gallery" data-caption="Ενδεικτική εσωτερική διακόσμηση">
+            <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/ΚΟΥΖΙΝΑ-ΠΑΓΚΟΣ.jpg);"></div>
+        </a>
+        <p class="text-center mt-2 text-blue-500">Ενδεικτική εσωτερική διακόσμηση</p>
+  
+    </div>
+  
+    <div>
+      <a href="images/ΕΙΣΟΔΟΣ-ΔΙΑΜΕΡΙΣΜΑΤΟΣ.jpg" data-fancybox="gallery" data-caption="Ενδεικτική εσωτερική διακόσμηση">
+          <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/ΕΙΣΟΔΟΣ-ΔΙΑΜΕΡΙΣΜΑΤΟΣ.jpg);"></div>
+      </a>
+      <p class="text-center mt-2 text-blue-500">Ενδεικτική εσωτερική διακόσμηση</p>
+  
+  </div>
+        
+  
+    </div>
+  </section>
+
+  <section id="buildingConstruction" class="max-w-full ml-16 pl-5 md:pl-20 pt-5 px-2 md:px-10 pb-0 py-12 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        
+      <div>
+        <a href="images/ΕΙΣ.ΔΙΑΜΕΡΙΣΜΑΤΟΣ.jpg" data-fancybox="gallery" data-caption="Ενδεικτική εσωτερική διακόσμηση">
+            <div class="bg-cover bg-center h-64 md:h-80 cursor-pointer" style="background-image: url(images/ΕΙΣ.ΔΙΑΜΕΡΙΣΜΑΤΟΣ.jpg);"></div>
+        </a>
+        <p class="text-center mt-2 text-blue-500">Ενδεικτική εσωτερική διακόσμηση</p>
+  
+    </div>
+  
+
+        
+  
+    </div>
+  </section>
+  
+  
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+</section>
+
+
+    </main>
+
+
+    
+    
+
+  </section>
+
+  <section class="relative mt-16 h-[50vh] bg-construction-site bg-center bg-cover w-full"></section>
+
+ 
+
+<section id="testing" class=" ml-16 flex flex-col lg:flex-row items-center justify-center h-screen text-blue-500 pb-96 pt-32" data-aos="fade-down" data-aos-duration="3000">
+    <div class="pb-12 w-full lg:w-1/3 max-w-2xl mx-auto lg:mx-0 lg:ml-auto text-center lg:text-left lg:mr-16" >
+        <div class="text-4xl mb-8">Επικοινωνία</div>
+    </div>
+    <div class=" flex flex-col space-y-4 w-full lg:w-2/3 max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
+        <div><a class="underlined" href="mailto:info@test.gr?subject=ΘΕΜΑ&body=Το%20Μήνυμα%20σου!">info@test.gr</a></div>
+        <div><a class="underlined" href="tel:6987300147">(+30) 6987300147</a></div>
+        <div><a class="underlined " target="_blank" href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI">Τοποθεσία</a></div>
+    </div>
+</section>
+
+
+  
+    
+
+      <!-- Sidebar -->
+      
+      <aside
+       class="fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0"
+      >
+        <nav class="fixed flex-col flex-1 space-y-6">
+          <ul class="flex-col space-y-1">
+            
+            <li class="nav-item">
+              <a
+              href="mailto:info@inter-tech.gr?subject=ΘΕΜΑ&body=Το%20Μήνυμα%20σου!"
+                class="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-10 h-10"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 6h16M4 6l8 6 8-6M4 6v12c0 1.1.9 2 2 2h12a2 2 0 002-2V6"
+                  ></path>
+                </svg>
+              </a>
+              <div class="info-box">
+                
+                info@inter-tech.gr
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a
+                href="tel:2106136552"
+                class="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-10 h-10"
+                  viewBox="0 0 14.51 21"
+                >
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #6b6b6e;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="MAIN">
+                      <g id="INFO">
+                        <path
+                          class="cls-1"
+                          d="M14.51,21H0V0H14.51ZM1,20H13.51V1H1Z"
+                        />
+                        <rect
+                          class="cls-1"
+                          x="0.5"
+                          y="3.24"
+                          width="13.51"
+                          height="1"
+                        />
+                        <rect
+                          class="cls-1"
+                          x="4.71"
+                          y="1.62"
+                          width="5.1"
+                          height="1"
+                        />
+                        <rect
+                          class="cls-1"
+                          x="0.5"
+                          y="16.76"
+                          width="13.51"
+                          height="1"
+                        />
+                        <circle class="cls-1" cx="7.26" cy="18.88" r="0.81" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <div class="info-box">
+                
+             +30 210-6136552
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a
+                href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI"
+                class="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg"
+              >
+                <!-- SVG for Location icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-10 h-10"
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M12 1a8.87 8.87 0 0 1 6.29 2.81A8.87 8.87 0 0 1 21.1 10c0 3.86-3.13 8.36-8.45 12.23L12 23l-.65-.77C6.03 18.36 2.9 13.86 2.9 10A8.87 8.87 0 0 1 5.71 2.81 8.87 8.87 0 0 1 12 1zm0 2a6.87 6.87 0 0 0-4.87 2.81A6.87 6.87 0 0 0 4.1 10c0 2.7 2.13 6.3 6.39 9.71L12 21l1.51-1.29C17.77 16.3 19.9 12.7 19.9 10a6.87 6.87 0 0 0-2.03-4.87A6.87 6.87 0 0 0 12 3zm0 2a5 5 0 0 1 5 5 5 5 0 0 1-1 3.16L12 18.12l-3.9-4.92A5 5 0 0 1 7 10a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3 3 3 0 0 0 .8 2L12 14.9l2.1-2.64A3 3 0 0 0 15 10a3 3 0 0 0-3-3z"
+                  />
+                </svg>
+              </a>
+              <div class="info-box">
+                
+                Ψυχάρη 23, 154 51 , Νέο Ψυχικό <a class="text-blue-500" href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI">ΠΛΟΗΓΗΣΗ</a>
+                 </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div
+          class="opacity-0 group-hover:opacity-100 absolute left-0 -ml-12 mt-2 w-32 bg-white border border-gray-300 rounded-lg shadow-lg p-2 text-sm whitespace-nowrap transition-opacity duration-200 ease-in-out"
+        ></div>
+      </aside>
+      
+
+      <aside  class="mobile-sidebar  hidden fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0">
+        
+      >
+        <nav class="fixed flex-col flex-1 space-y-6">
+          <ul class="flex-col space-y-1">
+            
+            <li class="nav-item">
+              <a href="mailto:info@inter-tech.gr" class="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 6h16M4 6l8 6 8-6M4 6v12c0 1.1.9 2 2 2h12a2 2 0 002-2V6"
+                  ></path>
+                </svg>
+              </a>
+              
+            </li>
+
+            <li class="nav-item">
+              <a
+                href="#"
+                class="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  viewBox="0 0 14.51 21"
+                >
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #6b6b6e;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="MAIN">
+                      <g id="INFO">
+                        <path
+                          class="cls-1"
+                          d="M14.51,21H0V0H14.51ZM1,20H13.51V1H1Z"
+                        />
+                        <rect
+                          class="cls-1"
+                          x="0.5"
+                          y="3.24"
+                          width="13.51"
+                          height="1"
+                        />
+                        <rect
+                          class="cls-1"
+                          x="4.71"
+                          y="1.62"
+                          width="5.1"
+                          height="1"
+                        />
+                        <rect
+                          class="cls-1"
+                          x="0.5"
+                          y="16.76"
+                          width="13.51"
+                          height="1"
+                        />
+                        <circle class="cls-1" cx="7.26" cy="18.88" r="0.81" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <div class="info-box">
+                
+             +30 210-6136552
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a
+                href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI"
+                class="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg"
+              >
+                <!-- SVG for Location icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M12 1a8.87 8.87 0 0 1 6.29 2.81A8.87 8.87 0 0 1 21.1 10c0 3.86-3.13 8.36-8.45 12.23L12 23l-.65-.77C6.03 18.36 2.9 13.86 2.9 10A8.87 8.87 0 0 1 5.71 2.81 8.87 8.87 0 0 1 12 1zm0 2a6.87 6.87 0 0 0-4.87 2.81A6.87 6.87 0 0 0 4.1 10c0 2.7 2.13 6.3 6.39 9.71L12 21l1.51-1.29C17.77 16.3 19.9 12.7 19.9 10a6.87 6.87 0 0 0-2.03-4.87A6.87 6.87 0 0 0 12 3zm0 2a5 5 0 0 1 5 5 5 5 0 0 1-1 3.16L12 18.12l-3.9-4.92A5 5 0 0 1 7 10a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3 3 3 0 0 0 .8 2L12 14.9l2.1-2.64A3 3 0 0 0 15 10a3 3 0 0 0-3-3z"
+                  />
+                </svg>
+              </a>
+              
+            </li>
+          </ul>
+        </nav>
+
+        <div
+          class="opacity-0 group-hover:opacity-100 absolute left-0 -ml-12 mt-2 w-32 bg-white border border-gray-300 rounded-lg shadow-lg p-2 text-sm whitespace-nowrap transition-opacity duration-200 ease-in-out"
+        ></div>
+      </aside>
+    
+
+      <header  class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between p-4">
+        
+        <div class="logo" rel="icon" href="images/logo_inter.png" type="image/png">
+            
+        </div>
+        <nav id="navigation" class="hidden md:flex md:space-x-4 ml-auto flex-col md:flex-row">
+          <div class="mt-4 flex flex-col md:flex-row">
+            <a  class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500" href="index.html">ΑΡΧΙΚΗ</a>
+          </div>
+          <div class="flex flex-col items-start">
+            <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out " href="tel:6987300147"><i class="fas fa-phone"></i> 6987300147</a>
+            <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out " href="mailto:info@test.gr?subject=ΘΕΜΑ&body=Το%20Μήνυμα%20σου!"><i class="fas fa-envelope"></i> info@test.gr</a>
+          </div>
+        </nav>
+        <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded">
+          <div class="mt-8">
+          <div class="mt-4 flex flex-col space-y-4 items-center">
+            <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500 border-b-2 border-blue-500" href="index.html">ΑΡΧΙΚΗ</a>
+            <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500" href="company.html">Η ΕΤΑΙΡΕΙΑ <b class="font-bold"></b></a>
+            <a id="erga-link" class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500" href="#ourWork">ΕΡΓΑ</a>
+            <a id="strata-link" class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500" href="#strataSection">ΣΤΡΑΤΑ Α.Τ.Ε</a>
+            <a id="logo-link" href="#uniqueSection"> <img class="h-6 w-auto" src="images/logoHotel.png" alt="Logo"></a>
+          </div>
+          <div class="flex flex-col items-center space-y-4 mt-8">
+            <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out " href="tel:2106136552"><i class="fas fa-phone"></i> 210-6136552</a>
+            <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out " href="mailto:info@inter-tech.gr?subject=ΘΕΜΑ&body=Το%20Μήνυμα%20σου!"><i class="fas fa-envelope"></i> info@inter-tech.gr</a>
+          </div>
+        </nav>
+        <div id="toggle-menu-button" class="md:hidden  select-none cursor-pointer">
+          <div id="open" class="relative w-6 h-6 cursor-pointer">
+            <!-- Hamburger icon -->
+            <div class="absolute inset-x-0 top-1 w-full h-0.5 bg-custom-border"></div>
+            <div class="absolute inset-x-0 top-1/2 transform -translate-y-1/2 w-full h-0.5 bg-custom-border"></div>
+            <div class="absolute inset-x-0 bottom-1 w-full h-0.5 bg-custom-border"></div>
+          </div>
+          <div id="close" class="relative w-6 h-6 cursor-pointer hidden">
+            <!-- Close (X) icon -->
+            <div class="absolute inset-x-0 top-1/2 transform -translate-y-1/2 w-full h-0.5 bg-custom-border rotate-45"></div>
+            <div class="absolute inset-x-0 top-1/2 transform -translate-y-1/2 w-full h-0.5 bg-custom-border -rotate-45"></div>
+          </div>
+        </div>
+  </header>
+
+  <footer  class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2">
+    <div class="text-center">
+        
+        <span> © 2023 ΣΧΕΔΙΑΣΜΟΣ • ΥΛΟΠΟΙΗΣΗ <a href="https://www.softbiz.eu" target="_blank" class="underline text-blue-500"> SOFTBIZ </a></span>
+    </div>
+</footer>
+
+    </section>
+
+    <script src="mainNav.js"></script>
+    <script src="slider.js"></script>
+    <script src="scrollButton.js"></script>
+    <script src="allScreen.js"></script>
+    <script src="active.js"></script>
+    <script src="direction.js"></script>
+    
+    
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+.bottom-content-upper {
+  background-color: rgba(48, 97, 73, 0.62);
+  line-height: 20px;
+  height: 20px;
+  width: 100%;
+  transition: opacity 0.2s ease-in;
+  position: absolute;
+  bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  font-family: CFAstyStd, Arial, Verdana, sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  margin-bottom: 2px;
+}
+
+.hover-content {
+  align-items: flex-start;
+  text-align: center;
+  background: rgba(48, 97, 73, 0.62);
+  background-blend-mode: multiply;
+  border: 0;
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  font-family: CFAstyStd, Arial, Verdana, sans-serif;
+  font-size: 18px;
+  justify-content: center;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  padding: 20px 0 0 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+  visibility: hidden;
+}
+
+.hover-parent:hover .hover-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bottom-content {
+  line-height: 20px;
+  height: 20px;
+  width: 100%;
+  transition: opacity 0.2s ease-in;
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  background-color: rgba(48, 97, 73, 0.62);
+  background-blend-mode: multiply;
+  text-align: center;
+  color: #fff;
+  font-family: CFAstyStd, Arial, Verdana, sans-serif;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hover-parent:hover .hover-content,
+.hover-parent:hover .bottom-content,
+.hover-parent:hover .bottom-content-upper {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hover-line::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: green;
+  transition: width 0.5s;
+}
+.hover-line:hover::after {
+  width: 100%;
+}

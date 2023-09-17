@@ -1,0 +1,13 @@
+.scrollTopButton {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .scrollTopButton {
+    display: block;
+  }
+}
+
+.offscreen {
+  transform: translateX(100%);
+}

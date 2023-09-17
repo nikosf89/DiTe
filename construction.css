@@ -1,0 +1,81 @@
+@media (max-width: 768px) {
+  aside.fixed {
+    display: none !important;
+  }
+
+  main {
+    margin-left: 0 !important;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding-left: 1rem !important;
+  }
+}
+
+#ourWork {
+  max-width: full;
+  margin-left: 16;
+  padding-left: 5;
+  padding-top: 5;
+  padding-right: 2;
+  padding-bottom: 0;
+  padding-top: 12;
+}
+
+@media (max-width: 768px) {
+  #ourWork {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #buildingConstruction {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+#buildingConstruction {
+  max-width: full;
+  margin-left: 16;
+  padding-left: 5;
+  padding-top: 5;
+  padding-right: 2;
+  padding-bottom: 0;
+  padding-top: 12;
+}
+
+@media (max-width: 768px) {
+  #uniqueSection {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #strataSection {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #testing {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c8319e396670696f191c344614779c64a7e1ba3e
