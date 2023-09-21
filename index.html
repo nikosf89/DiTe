@@ -127,22 +127,22 @@
       animation: typewriter 3s steps(40, end), blink 0.75s step-end infinite;
     }
     
-    /* Shimmer effect */
-    .shimmer {
-      animation: shimmer 2s infinite;
-      background: linear-gradient(90deg, rgba(255,255,255,0) 25%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 75%);
-      background-size: 200% 100%;
-      color: rgba(255,255,255,0.3);
-    }
-    @keyframes shimmer {
-      0% {
-        background-position: 200% 0;
-      }
-      100% {
-        background-position: -200% 0;
-      }
-    }
-    
+   /* Shimmer effect */
+.shimmer {
+  animation: shimmer 3s forwards;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 25%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 75%);
+  background-size: 300% 100%;
+  color: rgba(255,255,255,0.3);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
     /* Input field focus effect */
     input:focus {
       border-color: white;
@@ -192,8 +192,8 @@
 
 
 
-<title> DiTe • Welcome</title>
-<!-- <link class="logo" rel="icon" href="images/logo_inter.png" type="image/png" /> -->
+<title> Inter-tech • Welcome</title>
+<link class="logo" rel="icon" href="images/logo_inter.png" type="image/png" />
   </head>
   <body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none">
   >
@@ -260,8 +260,33 @@
           </div>
           
         </main>
-   
 
+        <!-- buttons -->
+        <div class="flex justify-center mt-10 gap-4">
+    <a href="area.html" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-blue-600 transition duration-300 ease-out border-2 border-blue-500 rounded-full shadow-md group">
+        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-500 group-hover:translate-x-0 ease">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </span>
+        <span class="absolute flex items-center justify-center w-full h-full text-blue-500 transition-all duration-300 transform group-hover:translate-x-full ease">The area</span>
+        <span class="relative invisible">The area</span>
+    </a>
+    <a href="investment.html" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-blue-600 transition duration-300 ease-out border-2 border-blue-500 rounded-full shadow-md group">
+        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-500 group-hover:translate-x-0 ease">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </span>
+        <span class="absolute flex items-center justify-center w-full h-full text-blue-500 transition-all duration-300 transform group-hover:translate-x-full ease">The investment</span>
+        <span class="relative invisible">The investment</span>
+    </a>
+    <a href="map.html" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-blue-600 transition duration-300 ease-out border-2 border-blue-500 rounded-full shadow-md group">
+        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-500 group-hover:translate-x-0 ease">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </span>
+        <span class="absolute flex items-center justify-center w-full h-full text-blue-500 transition-all duration-300 transform group-hover:translate-x-full ease">Map</span>
+        <span class="relative invisible">Map</span>
+    </a>
+</div>
+
+        
     <section id="ourWork" class="max-w-full ml-16 pl-5 md:pl-20  px-2 md:px-10 pb-0 py-12" data-aos="fade-up">
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
@@ -429,7 +454,7 @@
 
 
 
-
+  
 
 
     
@@ -558,7 +583,7 @@
               </a>
               <div class="info-box">
                 
-             +30 6987300147
+             6987300147
               </div>
             </li>
 
@@ -581,7 +606,7 @@
               </a>
               <div class="info-box">
                 
-                Τοποθεσία <a class="text-blue-500" href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI"></a>
+                ΤΟΠΟΘΕΣΙΑ <a class="text-blue-500" href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI"></a>
                  </div>
             </li>
           </ul>
@@ -672,7 +697,7 @@
               </a>
               <div class="info-box">
                 
-             +30 210-6136552
+             6987300147
               </div>
             </li>
 
