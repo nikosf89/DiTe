@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html style="overflow-y: scroll;" lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -71,7 +70,30 @@
       },
     };
   </script>
-  <title>Κηφισιά - Περιγραφή</title>
+
+  <title>Maps Display</title>
+  <style>
+    .maps-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .map {
+      margin: 10px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .map:first-child {
+      margin-left: 80px;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+    }
+  </style>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link class="logo" rel="icon" href="images/logo_inter.png" type="image/png" />
 </head>
@@ -84,12 +106,6 @@
     <i class="fa fa-chevron-up cursor-pointer"></i>
   </button>
 
-
-
-
-
-
-
   <style>
     @media (max-width: 640px) {
       .mobile-left {
@@ -99,12 +115,12 @@
   </style>
 
 <div class="flex items-center  fixed top-0 left-10 z-50  mobile-left ">
-  <a href="index.html">
+  <a href="index_en.html">
     <!-- <span  style="font-size: 1.5em; font-weight: bold; color: #000; margin-right: 20px;">ΣΤΡΑΤΑ Α.Τ.Ε</span> -->
     <img class="w-13 h-10" src="images/DiTe_logo.png" alt="Logo"  /> <!--style="margin-top: -2px; width: 100%; height: auto;" -->
   </a>
   <a href="/index.html"><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"></a>
-  <img src="./images/united-kingdom.png" alt="" class="w-7 h-7 ml-2">
+  <a href="/index_en.html"><img src="./images/united-kingdom.png" alt="" class="w-7 h-7 ml-2"></a>
   <img src="./images/spain.png" alt="" class="w-7 h-7 ml-2">
   <img src="./images/france.png" alt="" class="w-7 h-7 ml-2">
   <img src="./images/germany.png" alt="" class="w-7 h-7 ml-2">
@@ -114,70 +130,23 @@
 </div>
 
 
-
-
-  <!-- Main Section -->
-  <section class="bg-white py-20 px-6 md:px-8 shadow-lg rounded-lg max-w-4xl mx-auto space-y-10">
-
-    <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">Κηφισιά:<br> <br> Το Κόσμημα των Βορείων Προαστίων
-      της Αθήνας</h1>
-
-    <!-- Introduction -->
-    <p class="text-xl text-gray-600 mb-12">Η Κηφισιά είναι μια εξέχουσα κατοικημένη περιοχή στα βόρεια προάστια της
-      Αθήνας της Ελλάδας:</p>
-
-    <!-- Each Point -->
-    <div>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Εύπορη Ατμόσφαιρα</h2>
-      <p class="text-lg text-gray-700">Είναι γνωστή για την εύπορη ατμόσφαιρα, το πλούσιο πράσινο και τα κομψά
-        αρχοντικά. Μέσα σε αυτή την περιοχή το διαμέρισμα που βλέπετε, σας δίνει πλεονεκτική θέση.</p>
+  <div class="maps-container">
+    <div class="map">
+      <h2>Kifisia from above</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253366.09617760053!2d23.730818284614877!3d38.04380888810116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a19f1e81f6fd8b%3A0xe0d888ee03cb9796!2zzprOt8-GzrnPg865zqw!5e0!3m2!1sel!2sgr!4v1695304489340!5m2!1sel!2sgr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-
-    <!-- More Points -->
-    <div>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Εξαιρετική Υποδομή</h2>
-      <p class="text-lg text-gray-700">Η περιοχή έχει εξαιρετική υποδομή, με εύκολη πρόσβαση στο κέντρο της πόλης και σε
-        άλλα μέρη της Αθήνας. Η λεωφόρος Κηφισίας επιτρέπει βολική μετακίνηση και ο σιδηροδρομικός σταθμός χρησιμεύει ως
-        προαστιακός σιδηροδρομικός σταθμός.</p>
+    <div class="map">
+      <h2>Kifisia</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50247.216334771496!2d23.76853404932305!3d38.08316430849219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a19f1e81f6fd8b%3A0xe0d888ee03cb9796!2zzprOt8-GzrnPg865zqw!5e0!3m2!1sel!2sgr!4v1695304539603!5m2!1sel!2sgr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-
-    <div>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Ειρηνικό Περιβάλλον</h2>
-      <p class="text-lg text-gray-700">Η Κηφισιά προσφέρει ένα ειρηνικό περιβάλλον με όμορφα πάρκα και κήπους,
-        συμπεριλαμβανομένου του δημοφιλούς Kifisia Grove.</p>
-    </div>
-
-    <div>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Ζωντανή Σκηνή Αγορών</h2>
-      <p class="text-lg text-gray-700">Υπάρχει μια ζωντανή σκηνή αγορών στον κύριο εμπορικό δρόμο, Κηφισιά Avenue, με
-        μπουτίκ, καταστήματα μόδας, καφετέριες, εστιατόρια και μπαρ.</p>
-    </div>
-
-    <div>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Διάσημα Σχολεία</h2>
-      <p class="text-lg text-gray-700">Η περιοχή φιλοξενεί τα διάσημα σχολεία, καθιστώντας την ελκυστική για οικογένειες
-        που αναζητούν ποιοτική εκπαίδευση.</p>
-    </div>
-
-    <div>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Ασφάλεια</h2>
-      <p class="text-lg text-gray-700">Η ασφάλεια είναι ένα αξιοσημείωτο πλεονέκτημα της ζωής στην Κηφισιά λόγω των
-        χαμηλών ποσοστών εγκληματικότητας και των καλά διατηρημένων δρόμων.</p>
-    </div>
-
-    <div>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Διάφορες Ανέσεις</h2>
-      <p class="text-lg text-gray-700">Οι κάτοικοι έχουν πρόσβαση σε διάφορες ανέσεις, όπως ιατρικές εγκαταστάσεις,
-        γυμναστήρια, αθλητικές λέσχες, ποδηλατόδρομο και ψυχαγωγικές δραστηριότητες.</p>
-    </div>
-
-    <div>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Πολιτιστικές Εκδηλώσεις</h2>
-      <p class="text-lg text-gray-700">Η γειτονιά φιλοξενεί επίσης πολιτιστικές εκδηλώσεις και φεστιβάλ.</p>
-    </div>
-
-  </section>
-
+  </div>
+  
   <!-- Sidebar -->
 
   <aside
@@ -242,7 +211,7 @@
           </a>
           <div class="info-box">
 
-            Ψυχάρη 23, 154 51 , Νέο Ψυχικό <a class="text-blue-500"
+            Psychari 23, 154 51 , Neo Psychiko <a class="text-blue-500"
               href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI">ΠΛΟΗΓΗΣΗ</a>
           </div>
         </li>
@@ -333,13 +302,13 @@
     <nav id="navigation" class="hidden md:flex md:space-x-4 ml-auto flex-col md:flex-row">
       <div class="mt-4 flex flex-col md:flex-row">
         <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-          href="index.html">ΑΡΧΙΚΗ</a>
-        <a href="area.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Η Περιοχή</a>
+          href="index_en.html">Page</a>
+        <a href="area_en.html"
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">The Area</a>
         <a href="investment.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Η Επένδυση</a>
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">The Investment</a>
         <a href="map.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Χάρτης</a>
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Map</a>
       </div>
       <div class="flex flex-col items-start">
         <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out " href="tel:6987300147"><i
@@ -354,12 +323,12 @@
       <div class="mt-8">
         <div class="mt-4 flex flex-col space-y-4 items-center">
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500 border-b-2 border-blue-500"
-            href="index.html">ΑΡΧΙΚΗ</a>
+            href="index_en.html">Page</a>
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-            href="company.html">Η ΕΤΑΙΡΕΙΑ <b class="font-bold"></b></a>
+            href="company.html">COMPANY <b class="font-bold"></b></a>
           <a id="erga-link"
             class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-            href="#ourWork">ΕΡΓΑ</a>
+            href="#ourWork">CONSTRUCTION</a>
           <a id="strata-link"
             class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
             href="#strataSection">ΣΤΡΑΤΑ Α.Τ.Ε</a>
@@ -393,7 +362,7 @@
   <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2">
     <div class="text-center">
 
-      <span> © 2023 ΣΧΕΔΙΑΣΜΟΣ • ΥΛΟΠΟΙΗΣΗ <a href="https://www.softbiz.eu" target="_blank"
+      <span> © 2023 DESIGN • CONSTRUCTION <a href="https://www.softbiz.eu" target="_blank"
           class="underline text-blue-500"> SOFTBIZ </a></span>
     </div>
   </footer>
