@@ -189,6 +189,10 @@
     .bg-dramatic-entrance {
       animation: bgDramaticEntrance 5s forwards, bgZoom 30000s infinite alternate 5s;
     }
+
+    *{
+      box-sizing: border-box !important;
+    }
   </style>
 
   <title> Dite </title>
@@ -612,9 +616,10 @@
   </aside>
 
   <!-- Header -->
-  <header class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between p-4">
+  <header class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between ">
     <div class="logo" rel="icon" href="images/logo_inter.png" type="image/png">
     </div>
+    <!-- Header in PC -->
     <nav id="navigation" class="hidden md:flex md:space-x-4 ml-auto flex-col md:flex-row">
       <div class="mt-4 flex flex-col md:flex-row">
         <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
@@ -635,8 +640,8 @@
       </div>
     </nav>
     <!-- Mobile header -->
-    <nav id="mobile-navigation"
-      class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded">
+    <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded">
+      <span class="w-max "><a href="index.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span>
       <div class="mt-8">
         <div class="md:hidden  z-50  text-center">
           <div class="text-center">Select Language</div>
@@ -672,7 +677,8 @@
             info@inter-tech.gr</a>
         </div>
     </nav>
-    <div id="toggle-menu-button" class="md:hidden  select-none cursor-pointer flex justify-between w-full">
+    <span class="w-max h-full  mr-60"><a href="index.html" "><img class="w-14 h-full" src="images/DiTe_logo.png" alt="Logo" /></a></span>
+    <div id="toggle-menu-button" class="md:hidden  select-none cursor-pointer pr-5 ">
       <!-- <a href="index.html"><img class="w-13 h-10" src="images/DiTe_logo.png" alt="Logo" /></a> -->
       <div id="open" class="relative w-6 h-6 cursor-pointer">
         <!-- Hamburger icon -->
