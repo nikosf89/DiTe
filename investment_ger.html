@@ -73,38 +73,16 @@
     };
   </script>
 
-  <title>Maps Display</title>
-  <style>
-    .maps-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .map {
-      margin: 10px;
-      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .map:first-child {
-      margin-left: 80px;
-    }
-
-    h2 {
-      text-align: center;
-      font-family: 'Arial', sans-serif;
-    }
-  </style>
+  <title>Kifisia - Description</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link class="logo" rel="icon" href="images/logo_inter.png" type="image/png" />
 </head>
 
-<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none">
+<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none overflow-x-hidden">
   >
   <!-- Scroll to Top Button -->
   <button id="scrollTopButton"
-    class="scrollTopButton cursor-pointer fixed bottom-3.5 right-2.5  w-10 h-10 text-center z-50 decoration-white bg-blue-500 text-white p-2 rounded-full">
+    class="hidden scrollTopButton cursor-pointer fixed bottom-3.5 right-2.5  w-10 h-10 text-center z-50 decoration-white bg-blue-500 text-white p-2 rounded-full">
     <i class="fa fa-chevron-up cursor-pointer"></i>
   </button>
 
@@ -117,7 +95,7 @@
   </style>
 
 <div class="hidden md:flex md:items-center  fixed top-0 left-10 z-50  mobile-left ">
-  <a href="index.html">
+  <a href="index_ger.html">
     <!-- <span  style="font-size: 1.5em; font-weight: bold; color: #000; margin-right: 20px;">ΣΤΡΑΤΑ Α.Τ.Ε</span> -->
     <img class="w-13 h-10" src="images/DiTe_logo.png" alt="Logo" />
     <!--style="margin-top: -2px; width: 100%; height: auto;" -->
@@ -132,24 +110,68 @@
   <a href="index_is.html"><img src="./images/israel.png" alt="" class="w-7 h-7 ml-2"></a>
 </div>
 
+  <!-- Main Section -->
+  <section class="bg-white py-20 px-6 md:px-8 shadow-lg rounded-lg max-w-4xl mx-auto space-y-10">
 
-  <div class="maps-container">
-    <div class="map">
-      <h2>Κηφισιά απο ψηλά</h2>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253366.09617760053!2d23.730818284614877!3d38.04380888810116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a19f1e81f6fd8b%3A0xe0d888ee03cb9796!2zzprOt8-GzrnPg865zqw!5e0!3m2!1sel!2sgr!4v1695304489340!5m2!1sel!2sgr"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">Kifisia<br> <br> Das Juwel der nördlichen Vorstädte
+        von Athen</h1>
+
+    <!-- Introduction -->
+    <p class="text-xl text-gray-600 mb-12">Kifissia ist ein bekanntes Wohngebiet in den nördlichen Vororten von Kifissia.
+        Athen, Griechenland:</p>
+
+    <!-- Each Point -->
+    <div>
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Wohlhabende Atmosphäre</h2>
+      <p class="text-lg text-gray-700">Sie ist bekannt für ihre wohlhabende Atmosphäre, üppiges Grün und elegante
+        Villen. Die Wohnung, die Sie hier sehen, bietet Ihnen eine vorteilhafte Lage in diesem Gebiet.</p>
     </div>
-    <div class="map">
-      <h2>Κηφισιά</h2>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50247.216334771496!2d23.76853404932305!3d38.08316430849219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a19f1e81f6fd8b%3A0xe0d888ee03cb9796!2zzprOt8-GzrnPg865zqw!5e0!3m2!1sel!2sgr!4v1695304539603!5m2!1sel!2sgr"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- More Points -->
+    <div>
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Ausgezeichnete Infrastruktur</h2>
+      <p class="text-lg text-gray-700">Das Gebiet verfügt über eine ausgezeichnete Infrastruktur, mit einfachem Zugang zum Stadtzentrum und zu
+        anderen Teilen von Athen. Die Kifissia Avenue bietet bequeme Transportmöglichkeiten und der Bahnhof dient als
+        Vorort-Bahnhof.</p>
     </div>
-  </div>
-  
+
+    <div>
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Friedliche Umgebung</h2>
+      <p class="text-lg text-gray-700">Kifissia bietet eine friedliche Umgebung mit schönen Parks und Gärten,
+        darunter der beliebte Kifisia-Hain.</p>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Live-Markt-Szene</h2>
+      <p class="text-lg text-gray-700">Auf der Haupteinkaufsstraße, der Kifissia Avenue, gibt es eine lebhafte Einkaufsszene mit
+        Boutiquen, Modegeschäften, Cafés, Restaurants und Bars.</p>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Berühmte Schulen</h2>
+      <p class="text-lg text-gray-700">Das Gebiet beherbergt renommierte Schulen und ist daher für Familien attraktiv, die
+        die eine gute Ausbildung suchen.</p>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Sicherheit</h2>
+      <p class="text-lg text-gray-700">Die Sicherheit ist ein bemerkenswerter Vorteil des Lebens in Kifissia, denn die
+        niedrigen Kriminalitätsrate und der gut gepflegten Straßen.</p>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Verschiedene Annehmlichkeiten</h2>
+      <p class="text-lg text-gray-700">Die Bewohner haben Zugang zu verschiedenen Annehmlichkeiten, darunter medizinische Einrichtungen,
+        Fitnessstudios, Sportvereinen, einem Fahrradweg und Freizeitaktivitäten.</p>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Kulturelle Veranstaltungen</h2>
+      <p class="text-lg text-gray-700">Im Viertel finden auch kulturelle Veranstaltungen und Feste statt.</p>
+    </div>
+
+  </section>
+
   <!-- Sidebar -->
 
   <aside
@@ -214,7 +236,7 @@
           </a>
           <div class="info-box">
 
-            Ψυχάρη 23, 154 51 , Νέο Ψυχικό <a class="text-blue-500"
+            Psychari 23, 154 51 , Neo Psychiko <a class="text-blue-500"
               href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI">ΠΛΟΗΓΗΣΗ</a>
           </div>
         </li>
@@ -303,13 +325,13 @@
     <nav id="navigation" class="hidden md:flex md:space-x-4 ml-auto flex-col md:flex-row">
       <div class="mt-4 flex flex-col md:flex-row">
         <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-          href="index.html">ΑΡΧΙΚΗ</a>
-        <a href="area.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Η Περιοχή</a>
-        <a href="investment.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Η Επένδυση</a>
-        <a href="map.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Χάρτης</a>
+          href="index_ger.html">Seite</a>
+        <a href="area_ger.html"
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Das Gebiet</a>
+        <a href="investment_ger.html"
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Die Investition</a>
+        <a href="map_ger.html"
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Karte</a>
       </div>
       <div class="flex flex-col items-start">
         <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out " href="tel:6987300147"><i
@@ -321,10 +343,10 @@
     </nav>
     <!-- Mobile header -->
     <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded">
-      <span class="w-max "><a href="index.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span>
+      <span class="w-max "><a href="index_ger.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span>
       <div class="mt-8">
         <div class="md:hidden  z-50  text-center">
-          <div class="text-center">Select Language</div>
+          <div class="text-center">Sprache auswählen</div>
           <div class="flex justify-center">
             <a href="/index.html"><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"></a>
             <a href="/index_en.html"><img src="./images/united-kingdom.png" alt="" class="w-7 h-7 ml-2"></a>
@@ -339,15 +361,15 @@
 
         <div class="mt-4 flex flex-col space-y-4 items-center">
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500 border-b-2 border-blue-500"
-            href="index.html">ΑΡΧΙΚΗ</a>
+            href="index_ger.html">Seite</a>
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-            href="area.html">Η ΠΕΡΙΟΧΗ <b class="font-bold"></b></a>
+            href="area_ger.html">Das Gebiet <b class="font-bold"></b></a>
           <a id="erga-link"
             class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-            href="investment.html">Η ΕΠΕΝΔΥΣΗ</a>
+            href="investment_ger.html">Die Investition</a>
           <a id="strata-link"
             class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-            href="map.html">Χάρτης</a>
+            href="map_ger.html">Karte</a>
         </div>
         <div class="flex flex-col items-center space-y-4 mt-8">
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out "
@@ -378,7 +400,7 @@
   <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2">
     <div class="text-center">
 
-      <span> © 2023 ΣΧΕΔΙΑΣΜΟΣ • ΥΛΟΠΟΙΗΣΗ <a href="https://www.softbiz.eu" target="_blank"
+      <span> © 2023 DESIGN • KONSTRUKTION <a href="https://www.softbiz.eu" target="_blank"
           class="underline text-blue-500"> SOFTBIZ </a></span>
     </div>
   </footer>

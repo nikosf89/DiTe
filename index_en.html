@@ -26,7 +26,6 @@
   <script>
     tailwind.config = {
       theme: {
-
         screens: {
           'md': '1000px'
         },
@@ -200,11 +199,11 @@
   <link class="logo" rel="icon" href="images/DiTe_logo.png" type="image/png" />
 </head>
 
-<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none">
+<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none overflow-x-hidden">
   >
   <!-- Scroll to Top Button -->
   <button id="scrollTopButton"
-    class="scrollTopButton cursor-pointer fixed bottom-3.5 right-2.5  w-10 h-10 text-center z-50 decoration-white bg-blue-500 text-white p-2 rounded-full">
+    class=" hidden cursor-pointer fixed bottom-3.5 right-2.5  w-10 h-10 text-center z-50 decoration-white bg-blue-500 text-white p-2 rounded-full">
     <i class="fa fa-chevron-up cursor-pointer"></i>
   </button>
 
@@ -217,21 +216,21 @@
     }
   </style>
 
-  <div class="flex items-center  fixed top-0 left-10 z-50  mobile-left ">
-    <a href="index_en.html">
-      <!-- <span  style="font-size: 1.5em; font-weight: bold; color: #000; margin-right: 20px;">ΣΤΡΑΤΑ Α.Τ.Ε</span> -->
-      <img class="w-13 h-10" src="images/DiTe_logo.png" alt="Logo" />
-      <!--style="margin-top: -2px; width: 100%; height: auto;" -->
-    </a>
-    <a href="/index.html"><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"></a>
-    <a href="/index_en.html"><img src="./images/united-kingdom.png" alt="" class="w-7 h-7 ml-2"></a>
-    <img src="./images/spain.png" alt="" class="w-7 h-7 ml-2">
-    <img src="./images/france.png" alt="" class="w-7 h-7 ml-2">
-    <img src="./images/germany.png" alt="" class="w-7 h-7 ml-2">
-    <img src="./images/turkey.png" alt="" class="w-7 h-7 ml-2">
-    <img src="./images/china.png" alt="" class="w-7 h-7 ml-2">
-    <img src="./images/israel.png" alt="" class="w-7 h-7 ml-2">
-  </div>
+<div class="hidden md:flex md:items-center  fixed top-0 left-10 z-50  mobile-left ">
+  <a href="index.html">
+    <!-- <span  style="font-size: 1.5em; font-weight: bold; color: #000; margin-right: 20px;">ΣΤΡΑΤΑ Α.Τ.Ε</span> -->
+    <img class="w-13 h-10" src="images/DiTe_logo.png" alt="Logo" />
+    <!--style="margin-top: -2px; width: 100%; height: auto;" -->
+  </a>
+  <a href="/index.html"><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"></a>
+  <a href="/index_en.html"><img src="./images/united-kingdom.png" alt="" class="w-7 h-7 ml-2"></a>
+  <a href="index_sp.html"><img src="./images/spain.png" alt="" class="w-7 h-7 ml-2"></a>
+  <a href="/index_fr.html"><img src="./images/france.png" alt="" class="w-7 h-7 ml-2"></a>
+  <a href="index_ger.html"><img src="./images/germany.png" alt="" class="w-7 h-7 ml-2"></a>
+  <a href="index_tur.html"><img src="./images/turkey.png" alt="" class="w-7 h-7 ml-2"></a>
+  <a href="index_ch.html"><img src="./images/china.png" alt="" class="w-7 h-7 ml-2"></a>
+  <a href="index_is.html"><img src="./images/israel.png" alt="" class="w-7 h-7 ml-2"></a>
+</div>
 
 
   <main class="ml-16 relative px-8">
@@ -641,17 +640,18 @@
     </div>
   </aside>
 
-  <header class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between p-4">
+  <header class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between ">
     <div class="logo" rel="icon" href="images/logo_inter.png" type="image/png">
     </div>
+    <!-- Header in PC -->
     <nav id="navigation" class="hidden md:flex md:space-x-4 ml-auto flex-col md:flex-row">
       <div class="mt-4 flex flex-col md:flex-row">
         <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
           href="index_en.html">Page</a>
         <a href="area_en.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">The area</a>
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">The Area</a>
         <a href="investment_en.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">The investment</a>
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">The Investment</a>
         <a href="map_en.html"
           class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Map</a>
       </div>
@@ -663,21 +663,35 @@
           info@test.gr</a>
       </div>
     </nav>
-    <nav id="mobile-navigation"
-      class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded">
+    <!-- Mobile header -->
+    <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded">
+      <span class="w-max "><a href="index.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span>
       <div class="mt-8">
+        <div class="md:hidden  z-50  text-center">
+          <div class="text-center">Select Language</div>
+          <div class="flex justify-center">
+            <a href="/index.html"><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"></a>
+            <a href="/index_en.html"><img src="./images/united-kingdom.png" alt="" class="w-7 h-7 ml-2"></a>
+            <img src="./images/spain.png" alt="" class="w-7 h-7 ml-2">
+            <img src="./images/france.png" alt="" class="w-7 h-7 ml-2">
+            <img src="./images/germany.png" alt="" class="w-7 h-7 ml-2">
+            <img src="./images/turkey.png" alt="" class="w-7 h-7 ml-2">
+            <img src="./images/china.png" alt="" class="w-7 h-7 ml-2">
+            <img src="./images/israel.png" alt="" class="w-7 h-7 ml-2">
+            </div>
+        </div>
+
         <div class="mt-4 flex flex-col space-y-4 items-center">
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500 border-b-2 border-blue-500"
-            href="index_en.html">PAGE</a>
+            href="index_en.html">Page</a>
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-            href="company_en.html">THE COMPANY <b class="font-bold"></b></a>
+            href="area_en.html">The Area <b class="font-bold"></b></a>
           <a id="erga-link"
             class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-            href="#ourWork">CONSTRUCTIONS</a>
+            href="investment_en.html">The Investment</a>
           <a id="strata-link"
             class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-            href="#strataSection">ΣΤΡΑΤΑ Α.Τ.Ε</a>
-          <a id="logo-link" href="#uniqueSection"> <img class="h-6 w-auto" src="images/logoHotel.png" alt="Logo"></a>
+            href="map_en.html">Map</a>
         </div>
         <div class="flex flex-col items-center space-y-4 mt-8">
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out "
@@ -687,7 +701,8 @@
             info@inter-tech.gr</a>
         </div>
     </nav>
-    <div id="toggle-menu-button" class="md:hidden  select-none cursor-pointer">
+    <!-- <span class="w-max h-full  mr-60"><a href="index.html" "><img class="w-14 h-full" src="images/DiTe_logo.png" alt="Logo" /></a></span> -->
+    <div id="toggle-menu-button" class="md:hidden  select-none cursor-pointer pr-5 ">
       <div id="open" class="relative w-6 h-6 cursor-pointer">
         <!-- Hamburger icon -->
         <div class="absolute inset-x-0 top-1 w-full h-0.5 bg-custom-border"></div>
@@ -703,6 +718,7 @@
       </div>
     </div>
   </header>
+
 
   <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2">
     <div class="text-center">
