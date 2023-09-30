@@ -27,7 +27,7 @@
     tailwind.config = {
       theme: {
         screens: {
-          'md': '1000px'
+          'md': '980px'
         },
 
         extend: {
@@ -216,46 +216,57 @@
     }
   </style>
 
-<div class="hidden md:flex md:items-center  fixed top-0 left-10 z-50  mobile-left ">
+<div  class=" flex items-center  fixed top-0 left-10 z-50  mobile-left ">
   <a href="index_is.html">
     <!-- <span  style="font-size: 1.5em; font-weight: bold; color: #000; margin-right: 20px;">ΣΤΡΑΤΑ Α.Τ.Ε</span> -->
     <img class="w-13 h-10 hover:scale-110" src="images/DiTe_logo.png" alt="Logo" />
     <!--style="margin-top: -2px; width: 100%; height: auto;" -->
   </a>
-  <a href="index.html" class="hover:scale-125"><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"></a>
-  <a href="index_en.html" class="hover:scale-125"><img src="./images/united-kingdom.png" alt="" class="w-7 h-7 ml-2"></a>
-  <a href="index_sp.html" class="hover:scale-125"><img src="./images/spain.png" alt="" class="w-7 h-7 ml-2"></a>
-  <a href="index_fr.html" class="hover:scale-125"><img src="./images/france.png" alt="" class="w-7 h-7 ml-2"></a>
-  <a href="index_ger.html" class="hover:scale-125"><img src="./images/germany.png" alt="" class="w-7 h-7 ml-2"></a>
-  <a href="index_tur.html" class="hover:scale-125"><img src="./images/turkey.png" alt="" class="w-7 h-7 ml-2"></a>
-  <a href="index_ch.html" class="hover:scale-125"><img src="./images/china.png" alt="" class="w-7 h-7 ml-2"></a>
-  <a href="index_is.html" class="hover:scale-125"><img src="./images/israel.png" alt="" class="w-7 h-7 ml-2"></a>
+  <div class=" flex items-center " id="flags">
+    <a href="index.html" class="hover:scale-105 group leading-none flex flex-col gap-0"  ><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Greek</span></a>
+    <a href="index_en.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/united-kingdom.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">English</span></a>
+    <a href="index_sp.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/spain.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Spanish</span></a>
+    <a href="index_fr.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/france.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">French</span></a>
+    <a href="index_ger.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/germany.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">German</span></a>
+    <a href="index_tur.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/turkey.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Turkish</span></a>
+    <a href="index_ch.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/china.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Chinese</span></a>
+    <a href="index_is.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/israel.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Hebrew</span></a>
+  </div>
 </div>
 
+<style>
+  @media (max-width: 520px) {
+    #flags {
+      display: none !important;
+    }
+  }
+</style>
 
-  <main class="ml-16 relative px-8">
-    <div class="absolute inset-0 h-screen w-full bg-cover bg-center bg-dramatic-entrance"
+
+  <main id="main" class="ml-16 relative px-8">
+    <div id="bg" class="absolute inset-0 h-screen w-full bg-cover bg-center bg-dramatic-entrance"
       style="background-image: url('images/kifisia_12.jpg');"></div>
 
     <div class="absolute inset-0 h-screen w-full bg-black opacity-30"></div>
 
-    <div class="relative h-screen flex flex-col items-center justify-center text-center">
+    <div id="form-container" class="relative h-screen flex flex-col items-center justify-center text-center">
       <h2
+        id="header-text"
         class="typewriter text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 leading-relaxed text-shadow-md shimmer"
         data-aos="fade-down" data-aos-duration="3000">
-        בניית דירות מפוארות <br>בקיפיסיה<br>למידע נוסף אנא מלאו את הטופס למטה:
+        בניית דירות מפוארות<br>בקיפיסיה<br>למידע נוסף אנא מלאו את הטופס למטה:
       </h2>
-      <form data-aos="fade-left" data-aos-duration="3000"
+      <form id="form" data-aos="fade-left" data-aos-duration="3000"
         class="bg-opacity-30 backdrop-blur-md p-5 rounded-lg shadow-md flex flex-col items-start gap-3 max-w-sm w-full">
         <label for="name" style="margin-bottom: 5px; font-weight: bold; color: #fff;">שם פרטי:</label>
         <input type="text" id="name" name="name" placeholder="הכנס את שמך הפרטי"
           style="margin-bottom: 10px; padding: 10px; border-radius: 5px; border: 1px solid rgba(255, 255, 255, 0.8); width: 100%; font-size: 16px; background-color: rgba(0,0,0,0.3); color: #fff;"><br>
 
         <label for="surname" style="margin-bottom: 5px; font-weight: bold; color: #fff;">שם משפחה:</label>
-        <input type="text" id="surname" name="surname" placeholder="הכנס את שם המשפחה שלך"
+        <input type="text" id="surname" name="surname" placeholder="הכנס את שמך הפרטי"
           style="margin-bottom: 10px; padding: 10px; border-radius: 5px; border: 1px solid rgba(255, 255, 255, 0.8); width: 100%; font-size: 16px; background-color: rgba(0,0,0,0.3); color: #fff;"><br>
 
-        <label for="email" style="margin-bottom: 5px; font-weight: bold; color: #fff;">Email:</label>
+        <label for="email" style="margin-bottom: 5px; font-weight: bold; color: #fff;">אימייל:</label>
         <input type="email" id="email" name="email" placeholder="הכנס את המייל שלך"
           style="margin-bottom: 10px; padding: 10px; border-radius: 5px; border: 1px solid rgba(255, 255, 255, 0.8); width: 100%; font-size: 16px; background-color: rgba(0,0,0,0.3); color: #fff;"><br>
         <button type="submit"
@@ -265,9 +276,35 @@
 
   </main>
 
+  <style>
+    @media (orientation: landscape) and (max-height: 600px) {
+      #header-text {
+        padding-top: 150px !important;
+        margin-bottom: 5px !important;
+      }
+
+      #buttons {
+        margin-top: 230px !important;
+      }
+      
+      #form {
+        gap: 1px;
+      }
+
+      #bg {
+        height: 600px;
+      }
+
+      #form-container {
+        margin-bottom: 200px;
+      }
+
+    }
+  </style>
+
   <!-- buttons -->
-  <div class="flex justify-center mt-10 gap-4">
-    <a href="area_en.html"
+  <div id="buttons" class="flex justify-center mt-10 gap-4">
+    <a href="area_is.html"
       class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-blue-600 transition duration-300 ease-out border-2 border-blue-500 rounded-full shadow-md group">
       <span
         class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-500 group-hover:translate-x-0 ease">
@@ -280,7 +317,7 @@
         </span>
       <span class="relative invisible">האזור</span>
     </a>
-    <a href="investment.html"
+    <a href="investment_is.html"
       class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-blue-600 transition duration-300 ease-out border-2 border-blue-500 rounded-full shadow-md group">
       <span
         class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-500 group-hover:translate-x-0 ease">
@@ -292,7 +329,7 @@
         class="absolute flex items-center justify-center w-full h-full text-blue-500 transition-all duration-300 transform group-hover:translate-x-full ease">ההשקעה</span>
       <span class="relative invisible">ההשקעה</span>
     </a>
-    <a href="map_en.html"
+    <a href="map_is.html"
       class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-blue-600 transition duration-300 ease-out border-2 border-blue-500 rounded-full shadow-md group">
       <span
         class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-500 group-hover:translate-x-0 ease">
@@ -491,7 +528,7 @@
       <div><a class="underlined" href="mailto:info@test.gr?subject=ΘΕΜΑ&body=Το%20Μήνυμα%20σου!">info@test.gr</a></div>
       <div><a class="underlined" href="tel:6987300147">(+30) 6987300147</a></div>
       <div><a class="underlined " target="_blank"
-          href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI">Τοποθεσία</a>
+          href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI">מקום</a>
       </div>
     </div>
   </section>
@@ -544,7 +581,7 @@
           </a>
           <div class="info-box">
 
-            6987300147
+            +30.6987.300147
           </div>
         </li>
 
@@ -560,7 +597,7 @@
           </a>
           <div class="info-box">
 
-            מקום <a class="text-blue-500"
+            מקום<a class="text-blue-500"
               href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI"></a>
           </div>
         </li>
@@ -616,7 +653,7 @@
             </svg>
           </a>
           <div class="info-box">
-            6987300147
+            +30.6987.300147
           </div>
         </li>
 
@@ -645,32 +682,33 @@
     </div>
     <!-- Header in PC -->
     <nav id="navigation" class="hidden md:flex md:space-x-4 ml-auto flex-col md:flex-row">
-      <div class="mt-4 flex flex-col md:flex-row">
-        <img src="./images/israel.png" alt="" class="w-7 h-7 ml-2">
-        <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-          href="index_is.html">עמוד</a>
-        <a href="area_is.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">האזור</a>
-        <a href="investment_is.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">ההשקעה</a>
-        <a href="map_is.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">מַפָּה</a>
-      </div>
-      <div class="flex flex-col items-start">
+      <div class="mt-4 flex flex-col md:flex-row pb-4 pr-4">
+        <img src="./images/israel.png" alt="" class="w-7 h-7 ml-2 absolute inset-x-1/2 top-2">
+        <span class=" pr-1 pl-1 absolute inset-x-1/2 top-2 translate-x-9"><span class="mr-1">עִברִית</span><span>(Hebrew)</span></span>
+      <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
+        href="index_is.html">בית</a>
+      <a href="area_is.html"
+        class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">האזור</a>
+      <a href="investment_is.html"
+        class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">ההשקעה</a>
+      <a href="map_is.html"
+        class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">מַפָּה</a>
+    </div>
+      <!-- <div class="flex flex-col items-start">
         <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out " href="tel:6987300147"><i
             class="fas fa-phone"></i> 6987300147</a>
         <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out "
           href="mailto:info@test.gr?subject=ΘΕΜΑ&body=Το%20Μήνυμα%20σου!"><i class="fas fa-envelope"></i>
           info@test.gr</a>
-      </div>
+      </div> -->
     </nav>
     <!-- Mobile header -->
     <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded">
-      <span class="w-max "><a href="index.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span>
+      <!-- <span class="w-max "><a href="index.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span> -->
       <div class="mt-8">
         <div class="md:hidden  z-50  text-center">
           <div class="text-center">בחר שפה</div>
-          <div class="flex justify-center"
+          <div class="flex justify-center">
             <a href="index.html"><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"></a>
             <a href="index_en.html"><img src="./images/united-kingdom.png" alt="" class="w-7 h-7 ml-2"></a>
             <a href="index_sp.html"><img src="./images/spain.png" alt="" class="w-7 h-7 ml-2"></a>
@@ -696,7 +734,7 @@
         </div>
         <div class="flex flex-col items-center space-y-4 mt-8">
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out "
-            href="tel:2106136552"><i class="fas fa-phone"></i> 210-6136552</a>
+            href="tel:2106136552"><i class="fas fa-phone"></i> +30.210.6846329</a>
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out "
             href="mailto:info@inter-tech.gr?subject=ΘΕΜΑ&body=Το%20Μήνυμα%20σου!"><i class="fas fa-envelope"></i>
             info@inter-tech.gr</a>
@@ -720,11 +758,24 @@
     </div>
   </header>
 
+  <script>
+    const hamburger = document.getElementById("open");
+    const x = document.getElementById("close");
+    const flags = document.getElementById("flags");
+    hamburger.addEventListener("click", () => {
+      flags.style.display = "none"
+    })
+    x.addEventListener("click", () => {
+      flags.style.display = "flex"
+    })
+
+  </script>
+
 
   <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2">
     <div class="text-center">
 
-      <span> © 2023 עיצוב • בנייה<a href="https://www.softbiz.eu" target="_blank"
+      <span> © 2023 עיצוב • בנייה <a href="https://www.softbiz.eu" target="_blank"
           class="underline text-blue-500"> SOFTBIZ </a></span>
     </div>
   </footer>
