@@ -23,7 +23,7 @@
     tailwind.config = {
       theme: {
         screens: {
-          md: "980px"
+          md: "1200px"
         },
         extend: {
           backgroundImage: theme => ({
@@ -100,7 +100,7 @@
   <link class="logo" rel="icon" href="images/logo_inter.png" type="image/png" />
 </head>
 
-<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none">
+<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none dark">
   >
   <!-- Scroll to Top Button -->
   <button id="scrollTopButton"
@@ -118,9 +118,8 @@
 
 <div class=" flex items-center  fixed top-0 left-10 z-50  mobile-left ">
   <a href="index.html">
-    <!-- <span  style="font-size: 1.5em; font-weight: bold; color: #000; margin-right: 20px;">ΣΤΡΑΤΑ Α.Τ.Ε</span> -->
-    <img class="w-13 h-10 hover:scale-110" src="images/DiTe_logo.png" alt="Logo" />
-    <!--style="margin-top: -2px; width: 100%; height: auto;" -->
+    <img class="w-13 h-10 hover:scale-110 " id="logo-1" src="images/DiTe_logo.png" alt="Logo" >
+    <img class="w-13 h-10 hover:scale-110  hidden" id="logo-2" src="images/DiTe_logo_dark.png" alt="Logo" >
   </a>
   <div class=" flex items-center " id="flags">
     <a href="index.html" class="hover:scale-105 group leading-none flex flex-col gap-0"  ><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Greek</span></a>
@@ -144,6 +143,7 @@
 
 
 <div class="flex flex-col items-center pt-8">
+  <div class="text-center mb-2"><button id="theme-button"  class="bg-blue-500 px-4 py-2 text-white">Change Theme</button></div>
   <div class="w-3/4 md:w-1/2 lg:w-2/3 xl:w-1/2 mb-4">
       <h2 class="text-xl font-semibold mb-2">Κηφισιά από ψηλά</h2>
       <iframe
@@ -163,7 +163,7 @@
   <!-- Sidebar -->
 
   <aside
-    class="fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0">
+    class="fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0 dark">
     <nav class="fixed flex-col flex-1 space-y-6">
       <ul class="flex-col space-y-1">
 
@@ -306,7 +306,7 @@
   </aside>
 
 
-  <header class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between ">
+  <header class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between dark">
     <div class="logo" rel="icon" href="images/logo_inter.png" type="image/png">
     </div>
     <!-- Header in PC -->
@@ -317,6 +317,8 @@
         <span class=" pr-1 pl-1 absolute inset-x-1/2 top-2 translate-x-9"><span class="mr-1">Ελληνικα</span><span>(Greek)</span></span>
       <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
         href="index.html">ΑΡΧΙΚΗ</a>
+        <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
+        href="specifications.html">Ακίνητο</a>
       <a href="area.html"
         class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Η Περιοχή</a>
       <a href="investment.html"
@@ -333,7 +335,7 @@
       </div> -->
     </nav>
     <!-- Mobile header -->
-    <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded">
+    <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded dark">
       <!-- <span class="w-max "><a href="index.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span> -->
       <div class="mt-8">
         <div class="md:hidden  z-50  text-center">
@@ -353,11 +355,13 @@
         <div class="mt-4 flex flex-col space-y-4 items-center">
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500 border-b-2 border-blue-500"
             href="index.html">ΑΡΧΙΚΗ</a>
+            <a class="px-2 py-1 text-lg inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
+            href="specifications.html">Ακίνητο</a>
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-            href="area.html">Η ΠΕΡΙΟΧΗ <b class="font-bold"></b></a>
+            href="area.html">Η Περιοχή <b class="font-bold"></b></a>
           <a id="erga-link"
             class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-            href="investment.html">Η ΕΠΕΝΔΥΣΗ</a>
+            href="investment.html">Η Επένδυση</a>
           <a id="strata-link"
             class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
             href="map.html">Χάρτης</a>
@@ -390,20 +394,9 @@
     </div>
   </header>
 
-  <script>
-    const hamburger = document.getElementById("open");
-    const x = document.getElementById("close");
-    const flags = document.getElementById("flags");
-    hamburger.addEventListener("click", () => {
-      flags.style.display = "none"
-    })
-    x.addEventListener("click", () => {
-      flags.style.display = "flex"
-    })
+  
 
-  </script>
-
-  <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2">
+  <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2 dark">
     <div class="text-center">
 
       <span> © 2023 ΣΧΕΔΙΑΣΜΟΣ • ΥΛΟΠΟΙΗΣΗ <a href="https://www.softbiz.eu" target="_blank"
@@ -411,7 +404,39 @@
     </div>
   </footer>
 
-  </section>
+  <style>
+    .dark-theme {
+        background-color: #333333;
+        color: #ffffff;
+    }
+</style>
+
+<script>
+  const hamburger = document.getElementById("open");
+  const x = document.getElementById("close");
+  const flags = document.getElementById("flags");
+  hamburger.addEventListener("click", () => {
+      flags.style.display = "none"
+  })
+  x.addEventListener("click", () => {
+      flags.style.display = "flex"
+  })
+
+  const themeButton = document.getElementById("theme-button");
+  const elements = document.querySelectorAll(".dark");
+  const logo1 = document.getElementById("logo-1");
+  const logo2 = document.getElementById("logo-2");
+  themeButton.addEventListener("click", () => {
+      console.log("pressed")
+      elements.forEach((elem) => {
+          elem.classList.toggle("dark-theme")
+      })
+
+  logo1.classList.toggle("hidden");
+  logo2.classList.toggle("hidden");
+      
+  })
+</script> 
 
   <script src="mainNav.js"></script>
   <script src="slider.js"></script>

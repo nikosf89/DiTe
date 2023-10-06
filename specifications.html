@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="sliderFan.css">
     <link rel="stylesheet" href="mobileScrollButton.css">
     <link rel="stylesheet" href="construction.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
@@ -25,7 +25,7 @@
         tailwind.config = {
             theme: {
                 screens: {
-                    md: "980px"
+                    md: "1200px"
                 },
                 extend: {
                     backgroundImage: theme => ({
@@ -77,10 +77,10 @@
 
     <title>Kifisia Real Estate Investment</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link class="logo" rel="icon" href="images/logo_inter.png" type="image/png" />
+    <link class="logo" rel="icon" href="images/logo_inter.png" type="image/png" >
 </head>
 
-<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none">
+<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none dark">
     >
     <!-- Scroll to Top Button -->
     <button id="scrollTopButton"
@@ -95,13 +95,15 @@
                 left: 4px !important;
             }
         }
+        
     </style>
 
     <div class=" flex items-center  fixed top-0 left-10 z-50  mobile-left ">
-        <a href="index.html">
-            <!-- <span  style="font-size: 1.5em; font-weight: bold; color: #000; margin-right: 20px;">ΣΤΡΑΤΑ Α.Τ.Ε</span> -->
-            <img class="w-13 h-10 hover:scale-110" src="images/DiTe_logo.png" alt="Logo" />
-            <!--style="margin-top: -2px; width: 100%; height: auto;" -->
+        <a href="index.html" >
+            
+            <img class="w-13 h-10 hover:scale-110 " id="logo-1" src="images/DiTe_logo.png" alt="Logo" >
+            <img class="w-13 h-10 hover:scale-110  hidden" id="logo-2" src="images/DiTe_logo_dark.png" alt="Logo" >
+            
         </a>
         <div class=" flex items-center " id="flags">
             <a href="index.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img
@@ -143,9 +145,10 @@
 
 
     <!-- Main Section -->
-    <section class="bg-white py-20 px-6 md:px-8 shadow-lg rounded-lg max-w-4xl mx-auto">
+    <section class="bg-white py-20 px-6 md:px-8 shadow-lg rounded-lg max-w-4xl mx-auto dark">
+        <div class="text-center mb-2"><button id="theme-button"  class="bg-blue-500 px-4 py-2 text-white">Change Theme</button></div>
         <!-- Title -->
-        <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">Περιγραφές Διαμερισμάτων</h1>
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-10 dark">Περιγραφές Διαμερισμάτων</h1>
 
         <!-- Introduction -->
         <p class="text-xl text-center text-gray-600 mb-12"></p>
@@ -154,12 +157,12 @@
         <div class="space-y-10">
             <!-- Reason 1 -->
             <div>
-                <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center">
+                <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center dark">
                     <span
                         class="bg-blue-700 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">1</span>
                     ΟΡΟΦΟΔΙΑΜΕΡΙΣΜΑ Α ΟΡΟΦΟΥ
                 </h2>
-                <div class="text-lg text-gray-700">
+                <div class="text-lg text-gray-700 dark">
                     <ul>
                         <li class="list-disc ml-10 mb-3">Oροφοδιαμέρισμα Α΄ορόφου,
                             εσωτερικής επιφάνειας 115,32 τ.μ.</li>
@@ -184,26 +187,26 @@
             </div>
 
             <div>
-                <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center">
+                <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center dark">
                     <span
                         class="bg-blue-700 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">2</span>
                     ΙΣΟΓΕΙΟ
                 </h2>
-                <p class="text-lg text-gray-700">
+                <p class="text-lg text-gray-700 dark">
                     Πωλείται ισόγειο εσωτερικής επιφάνειας 122 τ.μ. με 100 τ.μ. κήπο μπροστά και 80 τ.μ. πίσω.
-                    <br>Για περισσότερες πληροφορίες τηλεφωνήστε στο +30.6987.300147 ή στείλτε email στο <a class="text-blue-900" href="mailto:info@virkia.com">info@virkia.com</a>.
+                    <br>Για περισσότερες πληροφορίες τηλεφωνήστε στο +30.6987.300147 ή στείλτε email στο <a class="text-blue-600" href="mailto:info@virkia.com">info@virkia.com</a>.
                 </p>
             </div>
 
             <div>
-                <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center">
+                <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center dark">
                     <span
                         class="bg-blue-700 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">3</span>
                         ΟΡΟΦΟΔΙΑΜΕΡΙΣΜΑ Β ΟΡΟΦΟΥ
                 </h2>
-                <p class="text-lg text-gray-700">
+                <p class="text-lg text-gray-700 dark">
                     Πωλείται οροφοδιαμέρισμα Β΄ορόφου ρετιρέ εσωτερικής επιφάνειας 125 τ.μ. 
-                    <br>Για περισσότερες πληροφορίες τηλεφωνήστε στο +30.6987.300147 ή στείλτε email στο <a class="text-blue-900" href="mailto:info@virkia.com">info@virkia.com</a>.
+                    <br>Για περισσότερες πληροφορίες τηλεφωνήστε στο +30.6987.300147 ή στείλτε email στο <a class="text-blue-600" href="mailto:info@virkia.com">info@virkia.com</a>.
                 </p>
             </div>
 
@@ -235,20 +238,20 @@
     </style>
 
     <aside id="side"
-        class="fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0">
+        class="fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0 dark">
         <nav class="fixed flex-col flex-1 space-y-6">
             <ul class="flex-col space-y-1">
 
                 <li class="nav-item">
                     <a href="mailto:info@virkia.com"
-                        class="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg">
+                        class="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg ">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                 d="M4 6h16M4 6l8 6 8-6M4 6v12c0 1.1.9 2 2 2h12a2 2 0 002-2V6"></path>
                         </svg>
                     </a>
-                    <div class="info-box">
+                    <div class="info-box dark">
 
                         info@virkia.com
                     </div>
@@ -256,7 +259,7 @@
 
                 <li class="nav-item">
                     <a href="tel:+30.6987.300147"
-                        class="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg">
+                        class="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg dark">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 14.51 21">
                             <defs>
                                 <style>
@@ -278,7 +281,7 @@
                             </g>
                         </svg>
                     </a>
-                    <div class="info-box">
+                    <div class="info-box dark">
                         +30.6987.300147
 
                     </div>
@@ -286,15 +289,15 @@
 
                 <li class="nav-item">
                     <a href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI"
-                        class="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg">
+                        class="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg ">
                         <!-- SVG for Location icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 24 24">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 " viewBox="0 0 24 24">
                             <path fill="none" d="M0 0h24v24H0z" />
                             <path
                                 d="M12 1a8.87 8.87 0 0 1 6.29 2.81A8.87 8.87 0 0 1 21.1 10c0 3.86-3.13 8.36-8.45 12.23L12 23l-.65-.77C6.03 18.36 2.9 13.86 2.9 10A8.87 8.87 0 0 1 5.71 2.81 8.87 8.87 0 0 1 12 1zm0 2a6.87 6.87 0 0 0-4.87 2.81A6.87 6.87 0 0 0 4.1 10c0 2.7 2.13 6.3 6.39 9.71L12 21l1.51-1.29C17.77 16.3 19.9 12.7 19.9 10a6.87 6.87 0 0 0-2.03-4.87A6.87 6.87 0 0 0 12 3zm0 2a5 5 0 0 1 5 5 5 5 0 0 1-1 3.16L12 18.12l-3.9-4.92A5 5 0 0 1 7 10a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3 3 3 0 0 0 .8 2L12 14.9l2.1-2.64A3 3 0 0 0 15 10a3 3 0 0 0-3-3z" />
                         </svg>
                     </a>
-                    <div class="info-box" style="text-wrap: nowrap !important;">
+                    <div class="info-box dark" style="text-wrap: nowrap !important;">
 
                         Ψυχάρη 23, 154 51 , Νέο Ψυχικό <a class="text-blue-500"
                             href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI">ΠΛΟΗΓΗΣΗ</a>
@@ -310,7 +313,7 @@
 
 
     <aside
-        class="mobile-sidebar  hidden fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0">
+        class="mobile-sidebar dark  hidden fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0">
 
         >
         <nav class="fixed flex-col flex-1 space-y-6">
@@ -380,7 +383,7 @@
 
 
     <header
-        class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between ">
+        class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between dark">
         <div class="logo" rel="icon" href="images/logo_inter.png" type="image/png">
         </div>
         <!-- Header in PC -->
@@ -391,6 +394,8 @@
                         class="mr-1">Ελληνικα</span><span>(Greek)</span></span>
                 <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
                     href="index.html">ΑΡΧΙΚΗ</a>
+                    <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
+                    href="specifications.html">Ακίνητο</a>
                 <a href="area.html"
                     class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Η
                     Περιοχή</a>
@@ -410,7 +415,7 @@
         </nav>
         <!-- Mobile header -->
         <nav id="mobile-navigation"
-            class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded">
+            class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded dark">
             <!-- <span class="w-max "><a href="index.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span> -->
             <div class="mt-8">
                 <div class="md:hidden  z-50  text-center">
@@ -430,11 +435,13 @@
                 <div class="mt-4 flex flex-col space-y-4 items-center">
                     <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500 border-b-2 border-blue-500"
                         href="index.html">ΑΡΧΙΚΗ</a>
+                        <a class="px-2 py-1 text-lg inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
+                        href="specifications.html">Ακίνητο</a>
                     <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-                        href="area.html">Η ΠΕΡΙΟΧΗ <b class="font-bold"></b></a>
+                        href="area.html">Η Περιοχή <b class="font-bold"></b></a>
                     <a id="erga-link"
                         class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-                        href="investment.html">Η ΕΠΕΝΔΥΣΗ</a>
+                        href="investment.html">Η Επένδυση</a>
                     <a id="strata-link"
                         class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
                         href="map.html">Χάρτης</a>
@@ -469,20 +476,9 @@
         </div>
     </header>
 
-    <script>
-        const hamburger = document.getElementById("open");
-        const x = document.getElementById("close");
-        const flags = document.getElementById("flags");
-        hamburger.addEventListener("click", () => {
-            flags.style.display = "none"
-        })
-        x.addEventListener("click", () => {
-            flags.style.display = "flex"
-        })
+    
 
-    </script>
-
-    <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2">
+    <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2 dark">
         <div class="text-center">
 
             <span> © 2023 ΣΧΕΔΙΑΣΜΟΣ • ΥΛΟΠΟΙΗΣΗ <a href="https://www.softbiz.eu" target="_blank"
@@ -490,8 +486,7 @@
         </div>
     </footer>
 
-    </section>
-
+    
     <script src="mainNav.js"></script>
     <script src="slider.js"></script>
     <script src="scrollButton.js"></script>
@@ -499,10 +494,45 @@
     <script src="active.js"></script>
     <script src="direction.js"></script>
 
+    <style>
+        .dark-theme {
+            background-color: #333333;
+            color: #ffffff;
+        }
+    </style>
+
+<script>
+    const hamburger = document.getElementById("open");
+    const x = document.getElementById("close");
+    const flags = document.getElementById("flags");
+    hamburger.addEventListener("click", () => {
+        flags.style.display = "none"
+    })
+    x.addEventListener("click", () => {
+        flags.style.display = "flex"
+    })
+
+    const themeButton = document.getElementById("theme-button");
+    const elements = document.querySelectorAll(".dark");
+    const logo1 = document.getElementById("logo-1");
+    const logo2 = document.getElementById("logo-2");
+    themeButton.addEventListener("click", () => {
+        console.log("pressed")
+        elements.forEach((elem) => {
+            elem.classList.toggle("dark-theme")
+        })
+
+    logo1.classList.toggle("hidden");
+    logo2.classList.toggle("hidden");
+        
+    })
+</script>
 
     <script>
         AOS.init();
     </script>
 </body>
+
+
 
 </html>

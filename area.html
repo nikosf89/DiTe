@@ -24,7 +24,7 @@
     tailwind.config = {
       theme: {
         screens: {
-          md: "980px"
+          md: "1200px"
         },
         extend: {
           backgroundImage: theme => ({
@@ -79,7 +79,7 @@
   <link class="logo" rel="icon" href="images/logo_inter.png" type="image/png" />
 </head>
 
-<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none">
+<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none dark">
   >
   <!-- Scroll to Top Button -->
   <button id="scrollTopButton"
@@ -98,9 +98,8 @@
 
 <div  class=" flex items-center  fixed top-0 left-10 z-50  mobile-left ">
   <a href="index.html">
-    <!-- <span  style="font-size: 1.5em; font-weight: bold; color: #000; margin-right: 20px;">ΣΤΡΑΤΑ Α.Τ.Ε</span> -->
-    <img class="w-13 h-10 hover:scale-110" src="images/DiTe_logo.png" alt="Logo" />
-    <!--style="margin-top: -2px; width: 100%; height: auto;" -->
+    <img class="w-13 h-10 hover:scale-110" src="images/DiTe_logo.png" id="logo-1" alt="Logo" />
+    <img class="w-13 h-10 hover:scale-110  hidden" id="logo-2" src="images/DiTe_logo_dark.png" alt="Logo" >
   </a>
   <div class=" flex items-center " id="flags">
     <a href="index.html" class="hover:scale-105 group leading-none flex flex-col gap-0"  ><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Greek</span></a>
@@ -126,22 +125,22 @@
 
 
   <!-- Main Section -->
-  <section class="bg-white py-20 px-6 md:px-8 shadow-lg rounded-lg max-w-4xl mx-auto">
-    <!-- Title -->
-    <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">Γιατί η Κηφισιά είναι το ιδανικό μέρος για real estate επενδύσεις.</h1>
+  <section class="bg-white py-20 px-6 md:px-8 shadow-lg rounded-lg max-w-4xl mx-auto dark">
+    <div class="text-center mb-2"><button id="theme-button"  class="bg-blue-500 px-4 py-2 text-white">Change Theme</button></div>
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-10 dark">Γιατί η Κηφισιά είναι το ιδανικό μέρος για real estate επενδύσεις.</h1>
 
     <!-- Introduction -->
-    <p class="text-xl text-center text-gray-600 mb-12">Ανακαλύψτε τα μοναδικά χαρακτηριστικά που καθιστούν την Κηφισιά ιδανικό μέρος για real estate</p>
+    <p class="text-xl text-center text-gray-600 mb-12 dark">Ανακαλύψτε τα μοναδικά χαρακτηριστικά που καθιστούν την Κηφισιά ιδανικό μέρος για real estate</p>
 
     <!-- Reasons List -->
     <div class="space-y-10">
       <!-- Reason 1 -->
       <div>
-        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center">
+        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center dark">
           <span class="bg-blue-700 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">1</span>
           Τοποθεσία
         </h2>
-        <p class="text-lg text-gray-700">Η Κηφισιά είναι μια από τις πιο αριστοκρατικές περιοχές της Αθήνας, που διαθέτει πολυτελή
+        <p class="text-lg text-gray-700 mb-4 dark">Η Κηφισιά είναι μια από τις πιο αριστοκρατικές περιοχές της Αθήνας, που διαθέτει πολυτελή
           βίλες, πολυτελή καταστήματα και γραφικά πάρκα. Όντας μόλις 12 χιλιόμετρα από το κέντρο της πόλης, προσφέρει τόσο
           ηρεμία όσο και εύκολη πρόσβαση στην αστική ζωή.</p>
           <div>
@@ -155,11 +154,11 @@
 
       <!-- Reason 2 -->
       <div>
-        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center">
+        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center dark">
           <span class="bg-blue-700 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">2</span>
           Μεγάλη ζήτηση.
         </h2>
-        <p class="text-lg text-gray-700">Η ελκυστικότητα της Κηφισιάς μεταξύ ντόπιων και ομογενών εξασφαλίζει σταθερά υψηλή
+        <p class="text-lg text-gray-700 mb-4 dark">Η ελκυστικότητα της Κηφισιάς μεταξύ ντόπιων και ομογενών εξασφαλίζει σταθερά υψηλή
           ζήτηση για ακίνητα, υποσχόμενες υψηλές αποδόσεις ενοικίου και ανατίμηση κεφαλαίου.</p>
           <div>
             <a href="images/vila.jpg" data-fancybox="gallery"  data-caption="">
@@ -172,11 +171,11 @@
 
       <!-- Reason 3 -->
       <div>
-        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center">
+        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center dark">
           <span class="bg-blue-700 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">3</span>
           Ανέσεις υψηλής ποιότητας
         </h2>
-        <p class="text-lg text-gray-700">Με τα πολυτελή καταστήματα, τα γκουρμέ εστιατόρια και τις πολυτελείς μπουτίκ της, η Κηφισιά
+        <p class="text-lg text-gray-700 mb-4 dark">Με τα πολυτελή καταστήματα, τα γκουρμέ εστιατόρια και τις πολυτελείς μπουτίκ της, η Κηφισιά
           υπόσχεται ένα υψηλό βιοτικό επίπεδο. Τα κορυφαία σχολεία της ενισχύουν περαιτέρω τη γοητεία της για τις οικογένειες.</p>
           <div>
             <a href="images/estiatorio.jpg" data-fancybox="gallery"  data-caption="">
@@ -189,11 +188,11 @@
 
       <!-- Reason 4 -->
       <div>
-        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center">
+        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center dark">
           <span class="bg-blue-700 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">4</span>
           Χώροι Πρασίνου
         </h2>
-        <p class="text-lg text-gray-700">Τα καταπράσινα πάρκα της Κηφισιάς προσφέρουν στους κατοίκους ένα γαλήνιο καταφύγιο από την αστική φασαρία,
+        <p class="text-lg text-gray-700 mb-4 dark">Τα καταπράσινα πάρκα της Κηφισιάς προσφέρουν στους κατοίκους ένα γαλήνιο καταφύγιο από την αστική φασαρία,
           αυξάνοντας την ελκυστικότητά της ως οικιστική και επενδυτική επιλογή.</p>
           <div>
             <a href="images/alsos-kifisias.jpg" data-fancybox="gallery"  data-caption="">
@@ -206,11 +205,11 @@
 
       <!-- Reason 5 -->
       <div>
-        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center">
+        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center dark">
           <span class="bg-blue-700 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">5</span>
           Μέσα Μεταφοράς
         </h2>
-        <p class="text-lg text-gray-700">Καλά συνδεδεμένη με το μετρό, η Κηφισιά εξασφαλίζει εύκολες μετακινήσεις προς το κέντρο της πόλης και
+        <p class="text-lg text-gray-700 mb-4 dark">Καλά συνδεδεμένη με το μετρό, η Κηφισιά εξασφαλίζει εύκολες μετακινήσεις προς το κέντρο της πόλης και
           άλλες αθηναϊκές περιοχές.</p>
           <div>
             <a href="images/proastiakos.jpg" data-fancybox="gallery"  data-caption="">
@@ -223,11 +222,11 @@
 
       <!-- Reason 6 -->
       <div>
-        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center">
+        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center dark">
           <span class="bg-blue-700 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">6</span>
           Ιστορία
         </h2>
-        <p class="text-lg text-gray-700">Πλούσια σε ιστορία, η Κηφισιά διαθέτει αξιοθέατα όπως το Δημοτικό Πάρκο και
+        <p class="text-lg text-gray-700 mb-4 dark">Πλούσια σε ιστορία, η Κηφισιά διαθέτει αξιοθέατα όπως το Δημοτικό Πάρκο και
           τον ιστορικό σιδηροδρομικό σταθμό, προσθέτοντας γοητεία και προσελκύοντας τουρίστες.</p>
           <div>
             <a href="images/διμοτικο-παρκο.jpg" data-fancybox="gallery"  data-caption="">
@@ -240,11 +239,11 @@
 
       <!-- Reason 7 -->
       <div>
-        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center">
+        <h2 class="text-2xl font-semibold text-blue-700 mb-2 flex items-center dark">
           <span class="bg-blue-700 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">7</span>
           Δυνατότητες Ανάπτυξης
         </h2>
-        <p class="text-lg text-gray-700">Ενώ η Κηφισιά είναι ήδη μια περιζήτητη τοποθεσία, υπόσχεται περαιτέρω
+        <p class="text-lg text-gray-700 mb-4 dark">Ενώ η Κηφισιά είναι ήδη μια περιζήτητη τοποθεσία, υπόσχεται περαιτέρω
           ανάπτυξη. Από την ανακαίνιση παλαιότερων ακινήτων έως τα αναμενόμενα νέα έργα, η περιοχή προσφέρει τόσο βραχυπρόθεσμα όσο και
           μακροπρόθεσμα επενδυτικά οφέλη.</p>
           <!-- <div>
@@ -257,8 +256,8 @@
       </div>
 
       <!-- Conclusion -->
-      <div class="mt-16 border-t-2 border-gray-200 pt-8">
-        <p class="text-xl text-center text-gray-700">Στην ουσία, με το μείγμα πολυτέλειας, ζήτησης και δυνατοτήτων,
+      <div class="mt-16 border-t-2 border-gray-200 pt-8 dark">
+        <p class="text-xl text-center text-gray-700 dark">Στην ουσία, με το μείγμα πολυτέλειας, ζήτησης και δυνατοτήτων,
           η Κηφισιά είναι αναμφισβήτητα μια κορυφαία επιλογή για επενδύσεις σε ακίνητα.</p>
       </div>
     </div>
@@ -275,7 +274,7 @@
   </style>
 
   <aside
-    id="side" class="fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0">
+    id="side" class="fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0 dark">
     <nav class="fixed flex-col flex-1 space-y-6">
       <ul class="flex-col space-y-1">
 
@@ -288,7 +287,7 @@
                 d="M4 6h16M4 6l8 6 8-6M4 6v12c0 1.1.9 2 2 2h12a2 2 0 002-2V6"></path>
             </svg>
           </a>
-          <div class="info-box">
+          <div class="info-box dark">
 
             info@virkia.com
           </div>
@@ -318,7 +317,7 @@
               </g>
             </svg>
           </a>
-          <div class="info-box">
+          <div class="info-box dark">
             +30.6987.300147
             
           </div>
@@ -334,7 +333,7 @@
                 d="M12 1a8.87 8.87 0 0 1 6.29 2.81A8.87 8.87 0 0 1 21.1 10c0 3.86-3.13 8.36-8.45 12.23L12 23l-.65-.77C6.03 18.36 2.9 13.86 2.9 10A8.87 8.87 0 0 1 5.71 2.81 8.87 8.87 0 0 1 12 1zm0 2a6.87 6.87 0 0 0-4.87 2.81A6.87 6.87 0 0 0 4.1 10c0 2.7 2.13 6.3 6.39 9.71L12 21l1.51-1.29C17.77 16.3 19.9 12.7 19.9 10a6.87 6.87 0 0 0-2.03-4.87A6.87 6.87 0 0 0 12 3zm0 2a5 5 0 0 1 5 5 5 5 0 0 1-1 3.16L12 18.12l-3.9-4.92A5 5 0 0 1 7 10a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3 3 3 0 0 0 .8 2L12 14.9l2.1-2.64A3 3 0 0 0 15 10a3 3 0 0 0-3-3z" />
             </svg>
           </a>
-          <div class="info-box" style="text-wrap: nowrap !important;">
+          <div class="info-box dark" style="text-wrap: nowrap !important;">
 
             Ψυχάρη 23, 154 51 , Νέο Ψυχικό <a class="text-blue-500"
               href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI">ΠΛΟΗΓΗΣΗ</a>
@@ -350,7 +349,7 @@
 
 
   <aside
-    class="mobile-sidebar  hidden fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0">
+    class="mobile-sidebar  hidden fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0 dark">
 
     >
     <nav class="fixed flex-col flex-1 space-y-6">
@@ -391,7 +390,7 @@
               </g>
             </svg>
           </a>
-          <div class="info-box">
+          <div class="info-box dark">
 
             +30 210-6136552
           </div>
@@ -418,7 +417,7 @@
   </aside>
 
 
-  <header class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between ">
+  <header class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between dark">
     <div class="logo" rel="icon" href="images/logo_inter.png" type="image/png">
     </div>
     <!-- Header in PC -->
@@ -428,6 +427,8 @@
         <span class=" pr-1 pl-1 absolute inset-x-1/2 top-2 translate-x-9"><span class="mr-1">Ελληνικα</span><span>(Greek)</span></span>
       <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
         href="index.html">ΑΡΧΙΚΗ</a>
+        <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
+        href="specifications.html">Ακίνητο</a>
       <a href="area.html"
         class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Η Περιοχή</a>
       <a href="investment.html"
@@ -444,7 +445,7 @@
       </div> -->
     </nav>
     <!-- Mobile header -->
-    <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded">
+    <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded dark">
       <!-- <span class="w-max "><a href="index.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span> -->
       <div class="mt-8">
         <div class="md:hidden  z-50  text-center">
@@ -464,6 +465,8 @@
         <div class="mt-4 flex flex-col space-y-4 items-center">
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500 border-b-2 border-blue-500"
             href="index.html">ΑΡΧΙΚΗ</a>
+            <a class="px-2 py-1 text-lg inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
+            href="specifications.html">Ακίνητο</a>
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
             href="area.html">Η ΠΕΡΙΟΧΗ <b class="font-bold"></b></a>
           <a id="erga-link"
@@ -501,20 +504,7 @@
     </div>
   </header>
 
-  <script>
-    const hamburger = document.getElementById("open");
-    const x = document.getElementById("close");
-    const flags = document.getElementById("flags");
-    hamburger.addEventListener("click", () => {
-      flags.style.display = "none"
-    })
-    x.addEventListener("click", () => {
-      flags.style.display = "flex"
-    })
-
-  </script>
-
-  <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2">
+  <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2 dark">
     <div class="text-center">
 
       <span> © 2023 ΣΧΕΔΙΑΣΜΟΣ • ΥΛΟΠΟΙΗΣΗ <a href="https://www.softbiz.eu" target="_blank"
@@ -522,7 +512,39 @@
     </div>
   </footer>
 
-  </section>
+  <style>
+    .dark-theme {
+        background-color: #333333;
+        color: #ffffff;
+    }
+</style>
+
+<script>
+  const hamburger = document.getElementById("open");
+  const x = document.getElementById("close");
+  const flags = document.getElementById("flags");
+  hamburger.addEventListener("click", () => {
+      flags.style.display = "none"
+  })
+  x.addEventListener("click", () => {
+      flags.style.display = "flex"
+  })
+
+  const themeButton = document.getElementById("theme-button");
+  const elements = document.querySelectorAll(".dark");
+  const logo1 = document.getElementById("logo-1");
+  const logo2 = document.getElementById("logo-2");
+  themeButton.addEventListener("click", () => {
+      console.log("pressed")
+      elements.forEach((elem) => {
+          elem.classList.toggle("dark-theme")
+      })
+
+  logo1.classList.toggle("hidden");
+  logo2.classList.toggle("hidden");
+      
+  })
+</script>  
 
   <script src="mainNav.js"></script>
   <script src="slider.js"></script>
