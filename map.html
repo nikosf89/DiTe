@@ -143,7 +143,8 @@
 
 
 <div class="flex flex-col items-center pt-8">
-  <div class="text-center mb-2"><button id="theme-button"  class="bg-blue-500 px-4 py-2 text-white">Change Theme</button></div>
+  <div class="text-center mb-2"><button id="theme-button" class="transition ease-in-out duration-300 bg-blue-500 px-4 py-2 text-white inline-flex items-center hover:scale-110"><span class="mr-1">Change
+    Theme</span> <img id="sun" style="width: 25px " src="images/sun.png"> <img class="hidden" id="moon" src="images/moon.png" style="width: 25px; " alt=""></button></div>
   <div class="w-3/4 md:w-1/2 lg:w-2/3 xl:w-1/2 mb-4">
       <h2 class="text-xl font-semibold mb-2">Κηφισιά από ψηλά</h2>
       <iframe
@@ -434,6 +435,8 @@
 
   logo1.classList.toggle("hidden");
   logo2.classList.toggle("hidden");
+  sun.classList.toggle("hidden");
+  moon.classList.toggle("hidden");
       
   })
 </script> 
