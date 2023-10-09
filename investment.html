@@ -109,11 +109,11 @@
     <a href="index_tur.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/turkey.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Turkish</span></a>
     <a href="index_ch.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/china.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Chinese</span></a>
     <a href="index_is.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/israel.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Hebrew</span></a>
-    <div class="text-center ml-5 mt-2"><button id="theme-button"
+    <div class="text-center ml-5 mt-2"><button id="theme-button1"
       class="transition ease-in-out duration-300 dark mb-2   text-black inline-flex items-center hover:scale-110"><span
           class="mr-1">
-          Theme</span> <img id="sun" style="width: 25px " src="images/sun.png"> <img class="hidden"
-          id="moon" src="images/moon.png" style="width: 25px; " alt=""></button></div>
+          Theme</span> <img id="sun1" style="width: 25px " src="images/sun.png"> <img class="hidden"
+          id="moon1" src="images/moon.png" style="width: 25px; " alt=""></button></div>
   </div>
 </div>
 
@@ -422,6 +422,11 @@
       <!-- <span class="w-max "><a href="index.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span> -->
       <div class="mt-8">
         <div class="md:hidden  z-50  text-center">
+          <div class="text-center ml-5 mt-2"><button id="theme-button2"
+            class="transition ease-in-out duration-300 dark mb-2   text-black inline-flex items-center hover:scale-110"><span
+                class="mr-1">
+                Theme</span> <img id="sun2" style="width: 25px " src="images/sun.png"> <img class="hidden"
+                id="moon2" src="images/moon.png" style="width: 25px; " alt=""></button></div>
           <div class="text-center">Select Language</div>
           <div class="flex justify-center">
             <a href="/index.html"><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"></a>
@@ -505,11 +510,12 @@
       flags.style.display = "flex"
   })
 
-  const themeButton = document.getElementById("theme-button");
+  const themeButton1 = document.getElementById("theme-button1");
+  const themeButton2 = document.getElementById("theme-button2");
   const elements = document.querySelectorAll(".dark");
   const logo1 = document.getElementById("logo-1");
   const logo2 = document.getElementById("logo-2");
-  themeButton.addEventListener("click", () => {
+  themeButton1.addEventListener("click", () => {
       console.log("pressed")
       elements.forEach((elem) => {
           elem.classList.toggle("dark-theme")
@@ -517,10 +523,29 @@
 
   logo1.classList.toggle("hidden");
   logo2.classList.toggle("hidden");
-  sun.classList.toggle("hidden");
-  moon.classList.toggle("hidden");
+  sun1.classList.toggle("hidden");
+  moon1.classList.toggle("hidden");
+  sun2.classList.toggle("hidden");
+  moon2.classList.toggle("hidden");
       
   })
+
+  themeButton2.addEventListener("click", () => {
+      console.log("pressed")
+      elements.forEach((elem) => {
+          elem.classList.toggle("dark-theme")
+      })
+
+  logo1.classList.toggle("hidden");
+  logo2.classList.toggle("hidden");
+  sun1.classList.toggle("hidden");
+  moon1.classList.toggle("hidden");
+  sun2.classList.toggle("hidden");
+  moon2.classList.toggle("hidden");
+      
+  })
+
+
 </script> 
 
 
