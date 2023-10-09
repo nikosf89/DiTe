@@ -232,11 +232,17 @@
       <a href="index_tur.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/turkey.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Turkish</span></a>
       <a href="index_ch.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/china.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Chinese</span></a>
       <a href="index_is.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/israel.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Hebrew</span></a>
+      <div class="text-center ml-5 mt-2"><button id="theme-button"
+        class="transition ease-in-out duration-300 dark mb-2   text-black inline-flex items-center hover:scale-110"><span
+            class="mr-1">
+            Theme</span> <img id="sun" style="width: 25px " src="images/sun.png"> <img class="hidden"
+            id="moon" src="images/moon.png" style="width: 25px; " alt=""></button></div>
     </div>
+
   </div>
 
   <style>
-    @media (max-width: 520px) {
+    @media (max-width: 600px) {
       #flags {
         display: none !important;
       }
@@ -854,6 +860,8 @@
 
     logo1.classList.toggle("hidden");
     logo2.classList.toggle("hidden");
+    sun.classList.toggle("hidden");
+    moon.classList.toggle("hidden");
         
     })
 </script>  
