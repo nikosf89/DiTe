@@ -23,7 +23,7 @@
     tailwind.config = {
       theme: {
         screens: {
-          md: "980px"
+          md: "1200px"
         },
         extend: {
           backgroundImage: theme => ({
@@ -100,11 +100,11 @@
   <link class="logo" rel="icon" href="images/logo_inter.png" type="image/png" />
 </head>
 
-<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none">
+<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none dark">
   >
   <!-- Scroll to Top Button -->
   <button id="scrollTopButton"
-    class="hidden scrollTopButton cursor-pointer fixed bottom-3.5 right-2.5  w-10 h-10 text-center z-50 decoration-white bg-blue-500 text-white p-2 rounded-full">
+    class="scrollTopButton cursor-pointer fixed bottom-3.5 right-2.5  w-10 h-10 text-center z-50 decoration-white bg-blue-500 text-white p-2 rounded-full">
     <i class="fa fa-chevron-up cursor-pointer"></i>
   </button>
 
@@ -116,11 +116,10 @@
     }
   </style>
 
-<div  class=" flex items-center  fixed top-0 left-10 z-50  mobile-left ">
+<div class=" flex items-center  fixed top-0 left-10 z-50  mobile-left ">
   <a href="index_sp.html">
-    <!-- <span  style="font-size: 1.5em; font-weight: bold; color: #000; margin-right: 20px;">ΣΤΡΑΤΑ Α.Τ.Ε</span> -->
-    <img class="w-13 h-10 hover:scale-110" src="images/DiTe_logo.png" alt="Logo" />
-    <!--style="margin-top: -2px; width: 100%; height: auto;" -->
+    <img class="w-13 h-10 hover:scale-110 " id="logo-1" src="images/DiTe_logo.png" alt="Logo" >
+    <img class="w-13 h-10 hover:scale-110  hidden" id="logo-2" src="images/DiTe_logo_dark.png" alt="Logo" >
   </a>
   <div class=" flex items-center " id="flags">
     <a href="index.html" class="hover:scale-105 group leading-none flex flex-col gap-0"  ><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Greek</span></a>
@@ -131,11 +130,16 @@
     <a href="index_tur.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/turkey.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Turkish</span></a>
     <a href="index_ch.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/china.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Chinese</span></a>
     <a href="index_is.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/israel.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Hebrew</span></a>
+    <div class="text-center ml-5 mt-2"><button id="theme-button1"
+      class="transition ease-in-out duration-300 dark mb-2   text-black inline-flex items-center hover:scale-110"><span
+          class="mr-1">
+          Theme</span> <img id="sun1" style="width: 25px " src="images/sun.png"> <img class="hidden"
+          id="moon1" src="images/moon.png" style="width: 25px; " alt=""></button></div>
   </div>
 </div>
 
 <style>
-  @media (max-width: 520px) {
+  @media (max-width: 600px) {
     #flags {
       display: none !important;
     }
@@ -143,26 +147,27 @@
 </style>
 
 
-
 <div class="flex flex-col items-center pt-8">
   <div class="w-3/4 md:w-1/2 lg:w-2/3 xl:w-1/2 mb-4">
-      <h2 class="text-xl font-semibold mb-2">Kifisia desde arriba</h2>
+      <h2 class="text-xl font-semibold mb-2">Kifissia from above</h2>
       <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253366.09617760053!2d23.730818284614877!3d38.04380888810116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a19f1e81f6fd8b%3A0xe0d888ee03cb9796!2zzprOt8-GzrnPg865zqw!5e0!3m2!1sel!2sgr!4v1695304489340!5m2!1sel!2sgr"
           width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
   <div class="w-3/4 md:w-1/2 lg:w-2/3 xl:w-1/2 mb-4">
-      <h2 class="text-xl font-semibold mb-2">Kifisia</h2>
+      <h2 class="text-xl font-semibold mb-2">Kifissia</h2>
       <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50247.216334771496!2d23.76853404932305!3d38.08316430849219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a19f1e81f6fd8b%3A0xe0d888ee03cb9796!2zzprOt8-GzrnPg865zqw!5e0!3m2!1sel!2sgr!4v1695304539603!5m2!1sel!2sgr"
           width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </div>
+
+
   
   <!-- Sidebar -->
 
   <aside
-    class="fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0">
+    class="fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0 dark">
     <nav class="fixed flex-col flex-1 space-y-6">
       <ul class="flex-col space-y-1">
 
@@ -207,7 +212,7 @@
           </a>
           <div class="info-box">
             +30.6987.300147
-            
+           
           </div>
         </li>
 
@@ -223,9 +228,9 @@
           </a>
           <div class="info-box" style="text-wrap: nowrap !important;">
 
-            Psychari 23, 154 51 , Νeo Psychiko <a class="text-blue-500"
-                href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI">NAVEGACIÓN</a>
-        </div>
+            Psychari 23, 154 51 , Neo Psychiko <a class="text-blue-500"
+              href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI">NAVIGATION</a>
+          </div>
         </li>
       </ul>
     </nav>
@@ -305,7 +310,7 @@
   </aside>
 
 
-  <header class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between ">
+  <header class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between dark">
     <div class="logo" rel="icon" href="images/logo_inter.png" type="image/png">
     </div>
     <!-- Header in PC -->
@@ -314,13 +319,15 @@
         <img src="./images/spain.png" alt="" class="w-7 h-7 ml-2 absolute inset-x-1/2 top-2">
         <span class=" pr-1 pl-1 absolute inset-x-1/2 top-2 translate-x-9"><span class="mr-1">Español</span><span>(Spanish)</span></span>
         <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-          href="index_sp.html">Inicio</a>
+          href="index_sp.html">INICIO</a>
+          <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
+          href="specifications_sp.html">Propiedad</a>
         <a href="area_sp.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">La Zona</a>
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">La zona</a>
         <a href="investment_sp.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">LA INVERSIÓN</a>
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">La inversión</a>
         <a href="map_sp.html"
-          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Mapa</a>
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">Carta</a>
       </div>
       <!-- <div class="flex flex-col items-start">
         <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out " href="tel:6987300147"><i
@@ -331,10 +338,15 @@
       </div> -->
     </nav>
     <!-- Mobile header -->
-    <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded">
-      <!-- <span class="w-max "><a href="index_sp.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span> -->
+    <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded dark">
+      <!-- <span class="w-max "><a href="index.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span> -->
       <div class="mt-8">
         <div class="md:hidden  z-50  text-center">
+          <div class="text-center ml-5 mt-2"><button id="theme-button2"
+            class="transition ease-in-out duration-300 dark mb-2   text-black inline-flex items-center hover:scale-110"><span
+                class="mr-1">
+                Theme</span> <img id="sun2" style="width: 25px " src="images/sun.png"> <img class="hidden"
+                id="moon2" src="images/moon.png" style="width: 25px; " alt=""></button></div>
           <div class="text-center">Seleccionar idioma</div>
           <div class="flex justify-center">
             <a href="index.html"><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"></a>
@@ -350,15 +362,17 @@
 
         <div class="mt-4 flex flex-col space-y-4 items-center">
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500 border-b-2 border-blue-500"
-            href="index_sp.html">Página</a>
+            href="index_sp.html">INICIO</a>
+            <a class="px-2 py-1 text-lg inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
+            href="specifications_sp.html">Propiedad</a>
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-            href="area_sp.html">La zona<b class="font-bold"></b></a>
+            href="area._sphtml">La zona<b class="font-bold"></b></a>
           <a id="erga-link"
             class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
             href="investment_sp.html">La inversión</a>
           <a id="strata-link"
             class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-            href="map_sp.html">Mapa</a>
+            href="map_sp.html">Cartaς</a>
         </div>
         <div class="flex flex-col items-center space-y-4 mt-8">
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out "
@@ -388,28 +402,70 @@
     </div>
   </header>
 
-  <script>
-    const hamburger = document.getElementById("open");
-    const x = document.getElementById("close");
-    const flags = document.getElementById("flags");
-    hamburger.addEventListener("click", () => {
-      flags.style.display = "none"
-    })
-    x.addEventListener("click", () => {
-      flags.style.display = "flex"
-    })
+  
 
-  </script>
-
-  <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2">
+  <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2 dark">
     <div class="text-center">
 
-      <span> © 2023 DISEÑO • CONSTRUCCIÓN <a href="https://www.softbiz.eu" target="_blank"
+      <span> © 2023 ΣΧΕΔΙΑΣΜΟΣ • ΥΛΟΠΟΙΗΣΗ <a href="https://www.softbiz.eu" target="_blank"
           class="underline text-blue-500"> SOFTBIZ </a></span>
     </div>
   </footer>
 
-  </section>
+  <style>
+    .dark-theme {
+        background-color: #333333;
+        color: #ffffff;
+    }
+</style>
+
+<script>
+  const hamburger = document.getElementById("open");
+  const x = document.getElementById("close");
+  const flags = document.getElementById("flags");
+  hamburger.addEventListener("click", () => {
+      flags.style.display = "none"
+  })
+  x.addEventListener("click", () => {
+      flags.style.display = "flex"
+  })
+
+  const themeButton1 = document.getElementById("theme-button1");
+  const themeButton2 = document.getElementById("theme-button2");
+  const elements = document.querySelectorAll(".dark");
+  const logo1 = document.getElementById("logo-1");
+  const logo2 = document.getElementById("logo-2");
+  themeButton1.addEventListener("click", () => {
+      console.log("pressed")
+      elements.forEach((elem) => {
+          elem.classList.toggle("dark-theme")
+      })
+
+  logo1.classList.toggle("hidden");
+  logo2.classList.toggle("hidden");
+  sun1.classList.toggle("hidden");
+  moon1.classList.toggle("hidden");
+  sun2.classList.toggle("hidden");
+  moon2.classList.toggle("hidden");
+      
+  })
+  themeButton2.addEventListener("click", () => {
+      console.log("pressed")
+      elements.forEach((elem) => {
+          elem.classList.toggle("dark-theme")
+      })
+
+  logo1.classList.toggle("hidden");
+  logo2.classList.toggle("hidden");
+  sun1.classList.toggle("hidden");
+  moon1.classList.toggle("hidden");
+  sun2.classList.toggle("hidden");
+  moon2.classList.toggle("hidden");
+      
+  })
+
+
+</script> 
 
   <script src="mainNav.js"></script>
   <script src="slider.js"></script>

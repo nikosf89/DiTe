@@ -23,7 +23,7 @@
     tailwind.config = {
       theme: {
         screens: {
-          md: "980px"
+          md: "1200px"
         },
         extend: {
           backgroundImage: theme => ({
@@ -100,11 +100,11 @@
   <link class="logo" rel="icon" href="images/logo_inter.png" type="image/png" />
 </head>
 
-<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none">
+<body class="text-custom-gray text-base leading-relaxed bg-white m-0 box-border outline-none dark">
   >
   <!-- Scroll to Top Button -->
   <button id="scrollTopButton"
-    class="hidden scrollTopButton cursor-pointer fixed bottom-3.5 right-2.5  w-10 h-10 text-center z-50 decoration-white bg-blue-500 text-white p-2 rounded-full">
+    class="scrollTopButton cursor-pointer fixed bottom-3.5 right-2.5  w-10 h-10 text-center z-50 decoration-white bg-blue-500 text-white p-2 rounded-full">
     <i class="fa fa-chevron-up cursor-pointer"></i>
   </button>
 
@@ -116,11 +116,10 @@
     }
   </style>
 
-<div  class=" flex items-center  fixed top-0 left-10 z-50  mobile-left ">
+<div class=" flex items-center  fixed top-0 left-10 z-50  mobile-left ">
   <a href="index_is.html">
-    <!-- <span  style="font-size: 1.5em; font-weight: bold; color: #000; margin-right: 20px;">ΣΤΡΑΤΑ Α.Τ.Ε</span> -->
-    <img class="w-13 h-10 hover:scale-110" src="images/DiTe_logo.png" alt="Logo" />
-    <!--style="margin-top: -2px; width: 100%; height: auto;" -->
+    <img class="w-13 h-10 hover:scale-110 " id="logo-1" src="images/DiTe_logo.png" alt="Logo" >
+    <img class="w-13 h-10 hover:scale-110  hidden" id="logo-2" src="images/DiTe_logo_dark.png" alt="Logo" >
   </a>
   <div class=" flex items-center " id="flags">
     <a href="index.html" class="hover:scale-105 group leading-none flex flex-col gap-0"  ><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Greek</span></a>
@@ -131,11 +130,16 @@
     <a href="index_tur.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/turkey.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Turkish</span></a>
     <a href="index_ch.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/china.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Chinese</span></a>
     <a href="index_is.html" class="hover:scale-105 group leading-none flex flex-col gap-0"><img src="./images/israel.png" alt="" class="w-7 h-7 ml-2"><span class="hidden group-hover:inline text-xs">Hebrew</span></a>
+    <div class="text-center ml-5 mt-2"><button id="theme-button1"
+      class="transition ease-in-out duration-300 dark mb-2   text-black inline-flex items-center hover:scale-110"><span
+          class="mr-1">
+          Theme</span> <img id="sun1" style="width: 25px " src="images/sun.png"> <img class="hidden"
+          id="moon1" src="images/moon.png" style="width: 25px; " alt=""></button></div>
   </div>
 </div>
 
 <style>
-  @media (max-width: 520px) {
+  @media (max-width: 600px) {
     #flags {
       display: none !important;
     }
@@ -157,11 +161,13 @@
           width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </div>
+
+
   
   <!-- Sidebar -->
 
   <aside
-    class="fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0">
+    class="fixed top-0 flex flex-col items-center justify-end w-16 h-screen py-8 overflow-y-auto bg-white border-r fixed bottom-0 left-0 dark">
     <nav class="fixed flex-col flex-1 space-y-6">
       <ul class="flex-col space-y-1">
 
@@ -205,8 +211,8 @@
             </svg>
           </a>
           <div class="info-box">
-
             +30.6987.300147
+           
           </div>
         </li>
 
@@ -220,11 +226,11 @@
                 d="M12 1a8.87 8.87 0 0 1 6.29 2.81A8.87 8.87 0 0 1 21.1 10c0 3.86-3.13 8.36-8.45 12.23L12 23l-.65-.77C6.03 18.36 2.9 13.86 2.9 10A8.87 8.87 0 0 1 5.71 2.81 8.87 8.87 0 0 1 12 1zm0 2a6.87 6.87 0 0 0-4.87 2.81A6.87 6.87 0 0 0 4.1 10c0 2.7 2.13 6.3 6.39 9.71L12 21l1.51-1.29C17.77 16.3 19.9 12.7 19.9 10a6.87 6.87 0 0 0-2.03-4.87A6.87 6.87 0 0 0 12 3zm0 2a5 5 0 0 1 5 5 5 5 0 0 1-1 3.16L12 18.12l-3.9-4.92A5 5 0 0 1 7 10a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3 3 3 0 0 0 .8 2L12 14.9l2.1-2.64A3 3 0 0 0 15 10a3 3 0 0 0-3-3z" />
             </svg>
           </a>
-          <div class="info-box">
+          <div class="info-box" style="text-wrap: nowrap !important;">
 
-            Psychari 23, 154 51 , Νeo Psychiko <a class="text-blue-500"
-                href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI">ניווט</a>
-        </div>
+            Psychari 23, 154 51, Neo Psychiko <a class="text-blue-500"
+              href="https://www.google.com/maps/place/%CE%A8%CF%85%CF%87%CE%AC%CF%81%CE%B7+23,+%CE%9D%CE%AD%CE%BF+%CE%A8%CF%85%CF%87%CE%B9%CE%BA%CF%8C+154+51/data=!4m2!3m1!1s0x14a1981334d601f3:0xb6ca9ba429c7e395?sa=X&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgPEAA&ved=2ahUKEwj7l5XX0ruAAxUOCuwKHdwgCPkQ8gF6BAgSEAI">ניווט</a>
+          </div>
         </li>
       </ul>
     </nav>
@@ -304,7 +310,7 @@
   </aside>
 
 
-  <header class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between ">
+  <header class="fixed top-0 right-0 left-0 z-10 bg-white h-12 border-b border-custom-border flex items-center justify-between dark">
     <div class="logo" rel="icon" href="images/logo_inter.png" type="image/png">
     </div>
     <!-- Header in PC -->
@@ -312,15 +318,17 @@
       <div class="mt-4 flex flex-col md:flex-row pb-4 pr-4">
         <img src="./images/israel.png" alt="" class="w-7 h-7 ml-2 absolute inset-x-1/2 top-2">
         <span class=" pr-1 pl-1 absolute inset-x-1/2 top-2 translate-x-9"><span class="mr-1">עִברִית</span><span>(Hebrew)</span></span>
-      <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
-        href="index_is.html">בית</a>
-      <a href="area_is.html"
-        class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">האזור</a>
-      <a href="investment_is.html"
-        class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">ההשקעה</a>
-      <a href="map_is.html"
-        class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">מַפָּה</a>
-    </div>
+        <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
+          href="index_is.html">בית</a>
+          <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
+          href="specifications_is.html">תכונה</a>
+        <a href="area_is.html"
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">האזור</a>
+        <a href="investment_is.html"
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">ההשקעה</a>
+        <a href="map_is.html"
+          class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500">מַפָּה</a>
+      </div>
       <!-- <div class="flex flex-col items-start">
         <a class="px-2 inline-block no-underline transition-colors duration-300 ease-in-out " href="tel:6987300147"><i
             class="fas fa-phone"></i> 6987300147</a>
@@ -330,10 +338,15 @@
       </div> -->
     </nav>
     <!-- Mobile header -->
-    <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded">
+    <nav id="mobile-navigation" class="hidden fixed top-0 right-0 bg-white overflow-auto flex flex-col w-auto h-auto border border-blue-500 rounded dark">
       <!-- <span class="w-max "><a href="index.html" "><img class="w-14 h-14 " src="images/DiTe_logo.png" alt="Logo" /></a></span> -->
       <div class="mt-8">
         <div class="md:hidden  z-50  text-center">
+          <div class="text-center ml-5 mt-2"><button id="theme-button2"
+            class="transition ease-in-out duration-300 dark mb-2   text-black inline-flex items-center hover:scale-110"><span
+                class="mr-1">
+                Theme</span> <img id="sun2" style="width: 25px " src="images/sun.png"> <img class="hidden"
+                id="moon2" src="images/moon.png" style="width: 25px; " alt=""></button></div>
           <div class="text-center">בחר שפה</div>
           <div class="flex justify-center">
             <a href="index.html"><img src="./images/greece.png" alt="" class="w-7 h-7 ml-2"></a>
@@ -349,7 +362,9 @@
 
         <div class="mt-4 flex flex-col space-y-4 items-center">
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500 border-b-2 border-blue-500"
-            href="index_is.html">עמוד</a>
+            href="index_is.html">בית</a>
+            <a class="px-2 py-1 text-lg inline-block no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
+            href="specifications_is.html">תכונה</a>
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out hover:text-blue-500"
             href="area_is.html">האזור<b class="font-bold"></b></a>
           <a id="erga-link"
@@ -361,9 +376,9 @@
         </div>
         <div class="flex flex-col items-center space-y-4 mt-8">
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out "
-          href="tel:2106136552"><i class="fas fa-phone"></i> 210-6136552</a>
-          <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out "
-          href="tel:+30.6987.300147"><i class="fas fa-phone"></i>+30.6987.300147</a>
+                href="tel:2106136552"><i class="fas fa-phone"></i> 210-6136552</a>
+                <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out "
+                href="tel:+30.6987.300147"><i class="fas fa-phone"></i>+30.6987.300147</a>
           <a class="px-2 py-1 inline-block text-lg no-underline transition-colors duration-300 ease-in-out "
             href="mailto:info@virkia.com"><i class="fas fa-envelope"></i>
             info@virkia.com</a>
@@ -387,29 +402,70 @@
     </div>
   </header>
 
-  <script>
-    const hamburger = document.getElementById("open");
-    const x = document.getElementById("close");
-    const flags = document.getElementById("flags");
-    hamburger.addEventListener("click", () => {
-      flags.style.display = "none"
-    })
-    x.addEventListener("click", () => {
-      flags.style.display = "flex"
-    })
+  
 
-  </script>
-
-
-  <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2">
+  <footer class="fixed bottom-0 left-0 right-0 flex justify-center text-sm bg-white p-2 dark">
     <div class="text-center">
 
-      <span> © 2023 עיצוב • בנייה <a href="https://www.softbiz.eu" target="_blank"
+      <span>© 2023 לְעַצֵב - יישום<a href="https://www.softbiz.eu" target="_blank"
           class="underline text-blue-500"> SOFTBIZ </a></span>
     </div>
   </footer>
 
-  </section>
+  <style>
+    .dark-theme {
+        background-color: #333333;
+        color: #ffffff;
+    }
+</style>
+
+<script>
+  const hamburger = document.getElementById("open");
+  const x = document.getElementById("close");
+  const flags = document.getElementById("flags");
+  hamburger.addEventListener("click", () => {
+      flags.style.display = "none"
+  })
+  x.addEventListener("click", () => {
+      flags.style.display = "flex"
+  })
+
+  const themeButton1 = document.getElementById("theme-button1");
+  const themeButton2 = document.getElementById("theme-button2");
+  const elements = document.querySelectorAll(".dark");
+  const logo1 = document.getElementById("logo-1");
+  const logo2 = document.getElementById("logo-2");
+  themeButton1.addEventListener("click", () => {
+      console.log("pressed")
+      elements.forEach((elem) => {
+          elem.classList.toggle("dark-theme")
+      })
+
+  logo1.classList.toggle("hidden");
+  logo2.classList.toggle("hidden");
+  sun1.classList.toggle("hidden");
+  moon1.classList.toggle("hidden");
+  sun2.classList.toggle("hidden");
+  moon2.classList.toggle("hidden");
+      
+  })
+  themeButton2.addEventListener("click", () => {
+      console.log("pressed")
+      elements.forEach((elem) => {
+          elem.classList.toggle("dark-theme")
+      })
+
+  logo1.classList.toggle("hidden");
+  logo2.classList.toggle("hidden");
+  sun1.classList.toggle("hidden");
+  moon1.classList.toggle("hidden");
+  sun2.classList.toggle("hidden");
+  moon2.classList.toggle("hidden");
+      
+  })
+
+
+</script> 
 
   <script src="mainNav.js"></script>
   <script src="slider.js"></script>
