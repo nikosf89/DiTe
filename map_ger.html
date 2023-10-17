@@ -435,8 +435,21 @@
   const elements = document.querySelectorAll(".dark");
   const logo1 = document.getElementById("logo-1");
   const logo2 = document.getElementById("logo-2");
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    elements.forEach((elem) => {
+      elem.classList.add("dark-theme");
+      logo1.classList.add("hidden")
+      logo2.classList.remove("hidden")
+      sun1.classList.add("hidden");
+      moon1.classList.remove("hidden");
+      sun2.classList.add("hidden");
+        moon2.classList.remove("hidden")
+    })
+  }
   themeButton1.addEventListener("click", () => {
-      console.log("pressed")
+      let isDark = elements[0].classList.contains("dark-theme") ? false : true;
+      localStorage.setItem("theme", isDark ? 'dark' : 'light')
       elements.forEach((elem) => {
           elem.classList.toggle("dark-theme")
       })
@@ -449,9 +462,11 @@
   moon2.classList.toggle("hidden");
       
   })
+
   themeButton2.addEventListener("click", () => {
-      console.log("pressed")
-      elements.forEach((elem) => {
+    let isDark = elements[0].classList.contains("dark-theme") ? false : true;
+    localStorage.setItem("theme", isDark ? 'dark' : 'light')  
+    elements.forEach((elem) => {
           elem.classList.toggle("dark-theme")
       })
 
@@ -463,10 +478,7 @@
   moon2.classList.toggle("hidden");
       
   })
-
-
-</script> 
-
+</script>  
   <script src="mainNav.js"></script>
   <script src="slider.js"></script>
   <script src="scrollButton.js"></script>

@@ -844,51 +844,65 @@
 </style>
 
 <script>
-    const hamburger = document.getElementById("open");
-    const x = document.getElementById("close");
-    const flags = document.getElementById("flags");
-    hamburger.addEventListener("click", () => {
-        flags.style.display = "none"
-    })
-    x.addEventListener("click", () => {
-        flags.style.display = "flex"
-    })
+  const hamburger = document.getElementById("open");
+  const x = document.getElementById("close");
+  const flags = document.getElementById("flags");
+  hamburger.addEventListener("click", () => {
+      flags.style.display = "none"
+  })
+  x.addEventListener("click", () => {
+      flags.style.display = "flex"
+  })
 
-    const themeButton1 = document.getElementById("theme-button1");
-    const themeButton2 = document.getElementById("theme-button2");
-    const elements = document.querySelectorAll(".dark");
-    const logo1 = document.getElementById("logo-1");
-    const logo2 = document.getElementById("logo-2");
-    themeButton1.addEventListener("click", () => {
-        console.log("pressed")
-        elements.forEach((elem) => {
-            elem.classList.toggle("dark-theme")
-        })
-
-    logo1.classList.toggle("hidden");
-    logo2.classList.toggle("hidden");
-    sun1.classList.toggle("hidden");
-    moon1.classList.toggle("hidden");
-    sun2.classList.toggle("hidden");
-    moon2.classList.toggle("hidden");
-        
+  const themeButton1 = document.getElementById("theme-button1");
+  const themeButton2 = document.getElementById("theme-button2");
+  const elements = document.querySelectorAll(".dark");
+  const logo1 = document.getElementById("logo-1");
+  const logo2 = document.getElementById("logo-2");
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    elements.forEach((elem) => {
+      elem.classList.add("dark-theme");
+      logo1.classList.add("hidden")
+      logo2.classList.remove("hidden")
+      sun1.classList.add("hidden");
+      moon1.classList.remove("hidden");
+      sun2.classList.add("hidden");
+        moon2.classList.remove("hidden")
     })
+  }
+  themeButton1.addEventListener("click", () => {
+      let isDark = elements[0].classList.contains("dark-theme") ? false : true;
+      localStorage.setItem("theme", isDark ? 'dark' : 'light')
+      elements.forEach((elem) => {
+          elem.classList.toggle("dark-theme")
+      })
 
-    themeButton2.addEventListener("click", () => {
-        console.log("pressed")
-        elements.forEach((elem) => {
-            elem.classList.toggle("dark-theme")
-        })
+  logo1.classList.toggle("hidden");
+  logo2.classList.toggle("hidden");
+  sun1.classList.toggle("hidden");
+  moon1.classList.toggle("hidden");
+  sun2.classList.toggle("hidden");
+  moon2.classList.toggle("hidden");
+      
+  })
 
-    logo1.classList.toggle("hidden");
-    logo2.classList.toggle("hidden");
-    sun1.classList.toggle("hidden");
-    moon1.classList.toggle("hidden");
-    sun2.classList.toggle("hidden");
-    moon2.classList.toggle("hidden");
-        
-    })
-</script>  
+  themeButton2.addEventListener("click", () => {
+    let isDark = elements[0].classList.contains("dark-theme") ? false : true;
+    localStorage.setItem("theme", isDark ? 'dark' : 'light')  
+    elements.forEach((elem) => {
+          elem.classList.toggle("dark-theme")
+      })
+
+  logo1.classList.toggle("hidden");
+  logo2.classList.toggle("hidden");
+  sun1.classList.toggle("hidden");
+  moon1.classList.toggle("hidden");
+  sun2.classList.toggle("hidden");
+  moon2.classList.toggle("hidden");
+      
+  })
+</script>    
 
   <script src="mainNav.js"></script>
   <script src="slider.js"></script>
